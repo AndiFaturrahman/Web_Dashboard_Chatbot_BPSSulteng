@@ -1,0 +1,26 @@
+{
+  "status": "OK",
+  "indicator": "inflasi",
+  "var_id": "1",
+  "title": "Laju Inflasi Tahunan (YoY)",
+  "datacontent": {
+    "11012313": 4.35,
+    "21012313": 1.87
+  },
+  "vervar": [
+    {
+      "val": "1",
+      "label": "Luwuk"
+    },
+    {
+      "val": "2",
+      "label": "Kota Palu"
+    }
+  ],
+  "tahun": [
+    {
+      "val": "123",
+      "label": "2023"
+    }
+  ]
+}
