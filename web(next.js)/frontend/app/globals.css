@@ -28,3 +28,31 @@
 .animate-pulse-orb {
   animation: pulseOrb 7s ease-in-out infinite alternate;
 }
+
+/* ============================================================ */
+/* UNIVERSAL CUSTOM ORANGE BPS SCROLLBAR                        */
+/* ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF7ED;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #F58220, #EA580C);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C2410C;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #F58220 #FFF7ED;
+}
