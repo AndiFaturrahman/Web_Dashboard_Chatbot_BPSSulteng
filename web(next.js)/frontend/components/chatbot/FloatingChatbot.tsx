@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { 
   MessageCircle, 
   X, 
@@ -9,11 +9,10 @@ import {
   User, 
   ExternalLink, 
   Sparkles, 
-  TrendingUp, 
-  TrendingDown, 
-  BarChart3, 
-  Activity,
-  Layers
+  BarChart2,
+  LineChart as LineChartIcon,
+  PieChart as PieChartIcon,
+  Activity
 } from "lucide-react";
 
 interface KeyCardItem {
@@ -28,12 +27,11 @@ interface ChartItem {
   label: string;
   value: number;
   unit?: string;
-  color?: string;
 }
 
 interface ChartPayload {
   title: string;
-  type: "bar" | "line";
+  defaultType?: "bar" | "line" | "pie";
   unit?: string;
   data: ChartItem[];
 }
@@ -46,6 +44,253 @@ interface ChatMessage {
   chart?: ChartPayload;
 }
 
+// Interactive Multi-Chart Renderer (Bar, Line, and Pie with Percentage)
+function ChatInteractiveChart({ chart }: { chart: ChartPayload }) {
+  const [chartType, setChartType] = useState<"bar" | "line" | "pie">(chart.defaultType || "bar");
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const colors = ["#F58220", "#10B981", "#8B5CF6", "#3B82F6", "#EC4899", "#F59E0B", "#E11D48"];
+  const totalVal = chart.data.reduce((acc, curr) => acc + curr.value, 0) || 1;
+  const maxVal = Math.max(...chart.data.map((d) => d.value), 1);
+  const minVal = Math.min(...chart.data.map((d) => d.value), 0);
+
+  // Line Chart SVG Path Calculations
+  const svgWidth = 320;
+  const svgHeight = 130;
+  const padding = 24;
+  const plotWidth = svgWidth - padding * 2;
+  const plotHeight = svgHeight - padding * 2;
+
+  const points = chart.data.map((d, i) => {
+    const x = padding + (i / Math.max(1, chart.data.length - 1)) * plotWidth;
+    const y = svgHeight - padding - ((d.value - minVal) / Math.max(0.1, maxVal - minVal)) * plotHeight;
+    return { x, y, ...d };
+  });
+
+  const linePath = points.reduce((acc, p, i) => (i === 0 ? `M ${p.x},${p.y}` : `${acc} L ${p.x},${p.y}`), "");
+  const areaPath = linePath + ` L ${points[points.length - 1].x},${svgHeight - padding} L ${points[0].x},${svgHeight - padding} Z`;
+
+  // Pie Chart SVG Slices with Percentage
+  let cumulativeAngle = 0;
+  const pieSlices = chart.data.map((item, idx) => {
+    const fraction = item.value / totalVal;
+    const startAngle = cumulativeAngle;
+    const endAngle = cumulativeAngle + fraction * 2 * Math.PI;
+    cumulativeAngle = endAngle;
+
+    const percentage = ((item.value / totalVal) * 100).toFixed(1) + "%";
+
+    // Coordinates for SVG Arc
+    const radius = 52;
+    const cx = 70;
+    const cy = 70;
+
+    const x1 = cx + radius * Math.cos(startAngle - Math.PI / 2);
+    const y1 = cy + radius * Math.sin(startAngle - Math.PI / 2);
+    const x2 = cx + radius * Math.cos(endAngle - Math.PI / 2);
+    const y2 = cy + radius * Math.sin(endAngle - Math.PI / 2);
+    const largeArc = fraction > 0.5 ? 1 : 0;
+
+    const pathData = fraction >= 0.999
+      ? `M ${cx},${cy - radius} A ${radius},${radius} 0 1,1 ${cx - 0.01},${cy - radius} Z`
+      : `M ${cx},${cy} L ${x1},${y1} A ${radius},${radius} 0 ${largeArc},1 ${x2},${y2} Z`;
+
+    return {
+      label: item.label,
+      value: item.value,
+      percentage,
+      color: colors[idx % colors.length],
+      pathData,
+    };
+  });
+
+  return (
+    <div className="rounded-2xl border border-orange-200 bg-white p-3.5 shadow-xs space-y-3">
+      {/* Chart Header with Type Switcher Tabs */}
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-orange-100 pb-2">
+        <span className="text-[11px] font-black text-slate-800 flex items-center gap-1.5">
+          <Activity className="h-3.5 w-3.5 text-[#EA580C]" />
+          {chart.title}
+        </span>
+
+        {/* Switcher Buttons: Bar, Line, Pie */}
+        <div className="flex items-center gap-1 bg-orange-50 p-1 rounded-lg border border-orange-200/80 text-[10px] font-bold">
+          <button
+            onClick={() => setChartType("bar")}
+            className={
+              "flex items-center gap-1 px-2 py-0.5 rounded-md transition-all " +
+              (chartType === "bar" ? "bg-[#EA580C] text-white shadow-xs font-black" : "text-slate-500 hover:text-[#EA580C]")
+            }
+            title="Tampilkan Grafik Batang"
+          >
+            <BarChart2 className="h-3 w-3" />
+            <span>Bar</span>
+          </button>
+
+          <button
+            onClick={() => setChartType("line")}
+            className={
+              "flex items-center gap-1 px-2 py-0.5 rounded-md transition-all " +
+              (chartType === "line" ? "bg-[#EA580C] text-white shadow-xs font-black" : "text-slate-500 hover:text-[#EA580C]")
+            }
+            title="Tampilkan Grafik Garis"
+          >
+            <LineChartIcon className="h-3 w-3" />
+            <span>Line</span>
+          </button>
+
+          <button
+            onClick={() => setChartType("pie")}
+            className={
+              "flex items-center gap-1 px-2 py-0.5 rounded-md transition-all " +
+              (chartType === "pie" ? "bg-[#EA580C] text-white shadow-xs font-black" : "text-slate-500 hover:text-[#EA580C]")
+            }
+            title="Tampilkan Pie Chart (%)"
+          >
+            <PieChartIcon className="h-3 w-3" />
+            <span>Pie %</span>
+          </button>
+        </div>
+      </div>
+
+      {/* 1. BAR CHART VIEW */}
+      {chartType === "bar" && (
+        <div className="space-y-2 pt-1">
+          {chart.data.map((ci, cIdx) => {
+            const pct = Math.min(100, Math.max(10, (ci.value / maxVal) * 100));
+            return (
+              <div key={cIdx} className="space-y-0.5">
+                <div className="flex justify-between text-[11px] font-bold text-slate-700">
+                  <span>{ci.label}</span>
+                  <span className="font-black text-[#EA580C] bg-orange-50 px-1.5 py-0.2 rounded border border-orange-100">
+                    {ci.value} {ci.unit || chart.unit}
+                  </span>
+                </div>
+                <div className="h-2.5 w-full overflow-hidden rounded-full bg-orange-100/70 p-0.5">
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-[#F58220] to-[#EA580C] transition-all duration-500"
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* 2. LINE CHART VIEW */}
+      {chartType === "line" && (
+        <div className="space-y-2">
+          <div className="flex justify-center bg-gradient-to-b from-orange-50/50 to-white rounded-xl border border-orange-100 p-1">
+            <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-28 overflow-visible">
+              <defs>
+                <linearGradient id="chatLineGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#F58220" stopOpacity="0.35" />
+                  <stop offset="100%" stopColor="#F58220" stopOpacity="0.0" />
+                </linearGradient>
+              </defs>
+
+              {/* Shaded Area */}
+              <path d={areaPath} fill="url(#chatLineGrad)" />
+
+              {/* Stroke Line */}
+              <path d={linePath} fill="none" stroke="#EA580C" strokeWidth="2.5" strokeLinecap="round" />
+
+              {/* Data Points */}
+              {points.map((p, pIdx) => {
+                const isHov = hoveredIndex === pIdx;
+                return (
+                  <g key={pIdx} onMouseEnter={() => setHoveredIndex(pIdx)} onMouseLeave={() => setHoveredIndex(null)} className="cursor-pointer">
+                    <circle
+                      cx={p.x}
+                      cy={p.y}
+                      r={isHov ? 5.5 : 4}
+                      fill="#EA580C"
+                      stroke="#FFFFFF"
+                      strokeWidth={isHov ? 2.5 : 1.5}
+                    />
+                    <text
+                      x={p.x}
+                      y={p.y - 8}
+                      textAnchor="middle"
+                      className="text-[9px] font-black fill-slate-800"
+                    >
+                      {p.value}
+                    </text>
+                    <text
+                      x={p.x}
+                      y={svgHeight - 6}
+                      textAnchor="middle"
+                      className="text-[9px] font-bold fill-slate-500"
+                    >
+                      {p.label}
+                    </text>
+                  </g>
+                );
+              })}
+            </svg>
+          </div>
+          <div className="text-[10px] text-slate-400 italic text-center">
+            💡 Arahkan ke titik grafik untuk melihat nilai spesifik
+          </div>
+        </div>
+      )}
+
+      {/* 3. PIE CHART VIEW (PERSENTASE %) */}
+      {chartType === "pie" && (
+        <div className="flex flex-col sm:flex-row items-center justify-around gap-3 pt-1">
+          {/* SVG Pie Chart */}
+          <div className="relative flex items-center justify-center shrink-0">
+            <svg width="140" height="140" viewBox="0 0 140 140" className="overflow-visible">
+              {pieSlices.map((slice, sIdx) => (
+                <path
+                  key={sIdx}
+                  d={slice.pathData}
+                  fill={slice.color}
+                  stroke="#FFFFFF"
+                  strokeWidth="2"
+                  className="transition-all duration-200 hover:opacity-80 cursor-pointer"
+                >
+                  <title>{`${slice.label}: ${slice.value} (${slice.percentage})`}</title>
+                </path>
+              ))}
+              {/* Inner Donut Center Hole */}
+              <circle cx="70" cy="70" r="28" fill="#FFFFFF" />
+              <text x="70" y="68" textAnchor="middle" className="text-[9px] font-bold fill-slate-400">
+                Total Share
+              </text>
+              <text x="70" y="80" textAnchor="middle" className="text-[11px] font-black fill-[#EA580C]">
+                100%
+              </text>
+            </svg>
+          </div>
+
+          {/* Slices Legend Table with Percentages */}
+          <div className="flex-1 w-full space-y-1 text-[11px]">
+            {pieSlices.map((slice, sIdx) => (
+              <div
+                key={sIdx}
+                className="flex items-center justify-between p-1.5 rounded-lg border border-orange-100 bg-orange-50/40"
+              >
+                <div className="flex items-center gap-2 truncate">
+                  <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ backgroundColor: slice.color }} />
+                  <span className="font-bold text-slate-700 truncate">{slice.label}</span>
+                </div>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <span className="text-slate-400 text-[10px]">({slice.value})</span>
+                  <span className="font-black text-[#EA580C] bg-white px-1.5 py-0.2 rounded border border-orange-200 text-[10px]">
+                    {slice.percentage}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function FloatingChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -55,13 +300,25 @@ export default function FloatingChatbot() {
       keycards: [
         { title: "Pertumbuhan Ekonomi", value: "11.91%", delta: "+2.14% YoY", status: "up", subtext: "Tertinggi Nasional" },
         { title: "IPM Sulteng", value: "71.38", delta: "+0.54 poin", status: "up", subtext: "Kategori Tinggi" }
-      ]
+      ],
+      chart: {
+        title: "Perbandingan Pertumbuhan PDRB Sulteng (%)",
+        defaultType: "bar",
+        unit: "%",
+        data: [
+          { label: "Morowali", value: 24.85 },
+          { label: "Morut", value: 21.40 },
+          { label: "Sulteng", value: 11.91 },
+          { label: "Banggai", value: 7.45 },
+          { label: "Palu", value: 6.82 }
+        ]
+      }
     },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // Helper to detect statistical keywords and generate interactive KeyCards & Mini Charts
+  // Helper to detect statistical keywords and generate interactive KeyCards & Multi-Charts
   const generateVisualWidgets = (query: string, replyText: string): { keycards?: KeyCardItem[]; chart?: ChartPayload } => {
     const q = (query + " " + replyText).toLowerCase();
 
@@ -73,12 +330,12 @@ export default function FloatingChatbot() {
         ],
         chart: {
           title: "Tren Tingkat Inflasi Tahunan (YoY)",
-          type: "bar",
+          defaultType: "line",
           unit: "%",
           data: [
-            { label: "2023", value: 2.61, unit: "%" },
-            { label: "2024", value: 1.57, unit: "%" },
-            { label: "2025", value: 1.84, unit: "%" }
+            { label: "2023", value: 2.61 },
+            { label: "2024", value: 1.57 },
+            { label: "2025", value: 1.84 }
           ]
         }
       };
@@ -91,15 +348,15 @@ export default function FloatingChatbot() {
           { title: "IPM Kota Palu", value: "82.52", delta: "Tertinggi", status: "up", subtext: "Sangat Tinggi" }
         ],
         chart: {
-          title: "Perbandingan IPM Wilayah Utama",
-          type: "bar",
+          title: "Perbandingan Indeks Pembangunan Manusia (IPM)",
+          defaultType: "bar",
           unit: "Poin",
           data: [
-            { label: "Kota Palu", value: 82.52, unit: "Poin" },
-            { label: "Morowali", value: 73.80, unit: "Poin" },
-            { label: "Poso", value: 72.48, unit: "Poin" },
-            { label: "Sulteng", value: 71.38, unit: "Poin" },
-            { label: "Donggala", value: 67.12, unit: "Poin" }
+            { label: "Kota Palu", value: 82.52 },
+            { label: "Morowali", value: 73.80 },
+            { label: "Poso", value: 72.48 },
+            { label: "Sulteng", value: 71.38 },
+            { label: "Donggala", value: 67.12 }
           ]
         }
       };
@@ -112,15 +369,16 @@ export default function FloatingChatbot() {
           { title: "Kemiskinan Terendah", value: "6.54%", delta: "Kota Palu", status: "down", subtext: "Prima" }
         ],
         chart: {
-          title: "Perbandingan Tingkat Kemiskinan (%)",
-          type: "bar",
+          title: "Komparasi Tingkat Kemiskinan Daerah (%)",
+          defaultType: "pie",
           unit: "%",
           data: [
-            { label: "Kota Palu", value: 6.54, unit: "%" },
-            { label: "Banggai", value: 7.32, unit: "%" },
-            { label: "Sulteng", value: 11.77, unit: "%" },
-            { label: "Poso", value: 15.12, unit: "%" },
-            { label: "Donggala", value: 16.48, unit: "%" }
+            { label: "Kota Palu", value: 6.54 },
+            { label: "Banggai", value: 7.32 },
+            { label: "Sigi", value: 11.95 },
+            { label: "Morowali", value: 12.18 },
+            { label: "Poso", value: 15.12 },
+            { label: "Donggala", value: 16.48 }
           ]
         }
       };
@@ -133,15 +391,15 @@ export default function FloatingChatbot() {
           { title: "Total PDRB Sulteng", value: "Rp 265.5 T", delta: "ADHK", status: "up", subtext: "Hilirisasi Nikel" }
         ],
         chart: {
-          title: "Laju Pertumbuhan Ekonomi Tercepat (%)",
-          type: "bar",
+          title: "Pangsa & Laju Pertumbuhan PDRB Daerah",
+          defaultType: "pie",
           unit: "%",
           data: [
-            { label: "Morowali", value: 24.85, unit: "%" },
-            { label: "Morut", value: 21.40, unit: "%" },
-            { label: "Sulteng", value: 11.91, unit: "%" },
-            { label: "Banggai", value: 7.45, unit: "%" },
-            { label: "Palu", value: 6.82, unit: "%" }
+            { label: "Morowali", value: 24.85 },
+            { label: "Morowali Utara", value: 21.40 },
+            { label: "Banggai", value: 7.45 },
+            { label: "Kota Palu", value: 6.82 },
+            { label: "Lainnya", value: 5.20 }
           ]
         }
       };
@@ -155,32 +413,23 @@ export default function FloatingChatbot() {
         ],
         chart: {
           title: "Tingkat Pengangguran Terbuka TPT (%)",
-          type: "bar",
+          defaultType: "bar",
           unit: "%",
           data: [
-            { label: "Banggai Laut", value: 2.30, unit: "%" },
-            { label: "Parigi", value: 2.45, unit: "%" },
-            { label: "Sulteng", value: 2.95, unit: "%" },
-            { label: "Morowali", value: 3.42, unit: "%" },
-            { label: "Palu", value: 5.48, unit: "%" }
+            { label: "Banggai Laut", value: 2.30 },
+            { label: "Parigi Moutong", value: 2.45 },
+            { label: "Sigi", value: 2.50 },
+            { label: "Sulteng Rata-Rata", value: 2.95 },
+            { label: "Kota Palu", value: 5.48 }
           ]
         }
-      };
-    }
-
-    if (q.includes("ntp") || q.includes("petani")) {
-      return {
-        keycards: [
-          { title: "NTP Rata-Rata Sulteng", value: "108.4", delta: "+1.85 Poin", status: "up", subtext: "Petani Sejahtera" },
-          { title: "NTP Tertinggi", value: "113.8", delta: "Morowali Utara", status: "up", subtext: "Perkebunan Sawit" }
-        ]
       };
     }
 
     return {};
   };
 
-  // Markdown Formatter for Bold and Paragraphs
+  // Markdown Formatter
   const renderFormattedMessage = (content: string) => {
     const lines = content.split("\n");
     return lines.map((line, lIdx) => {
@@ -271,7 +520,7 @@ export default function FloatingChatbot() {
 
   return (
     <>
-      {/* Floating Toggle Button (Positioned cleanly above Mobile Bottom Nav) */}
+      {/* Floating Toggle Button */}
       <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2">
         {!isOpen && (
           <div className="hidden sm:flex items-center gap-2 rounded-2xl border border-orange-300 bg-slate-900 px-3.5 py-2 text-xs font-black text-white shadow-2xl animate-bounce">
@@ -288,7 +537,7 @@ export default function FloatingChatbot() {
         </button>
       </div>
 
-      {/* Interactive Chat Window with KeyCard & Chart Rendering */}
+      {/* Interactive Chat Window */}
       {isOpen && (
         <div className="fixed bottom-20 sm:bottom-24 right-3 sm:right-6 z-50 flex h-[520px] sm:h-[580px] w-[94vw] max-w-[420px] flex-col overflow-hidden rounded-3xl border-2 border-orange-300 bg-white shadow-2xl backdrop-blur-2xl">
           {/* Header */}
@@ -333,7 +582,7 @@ export default function FloatingChatbot() {
                     {/* Message Text */}
                     <div>{renderFormattedMessage(m.content)}</div>
 
-                    {/* 1. INTERACTIVE KEYCARDS (Like Mobile Chatbot) */}
+                    {/* 1. KEYCARDS */}
                     {m.keycards && m.keycards.length > 0 && (
                       <div className="grid grid-cols-2 gap-2 pt-1">
                         {m.keycards.map((kc, kIdx) => (
@@ -351,39 +600,9 @@ export default function FloatingChatbot() {
                       </div>
                     )}
 
-                    {/* 2. INTERACTIVE MINI CHART (Like Mobile Chatbot) */}
+                    {/* 2. MULTI-CHART WIDGET: BAR, LINE, PIE (%) */}
                     {m.chart && (
-                      <div className="rounded-xl border border-orange-200 bg-white p-3 shadow-xs space-y-2">
-                        <div className="flex items-center justify-between border-b border-orange-100 pb-1.5">
-                          <span className="text-[11px] font-black text-slate-800 flex items-center gap-1">
-                            <BarChart3 className="h-3.5 w-3.5 text-[#EA580C]" />
-                            {m.chart.title}
-                          </span>
-                        </div>
-
-                        <div className="space-y-1.5 pt-1">
-                          {(() => {
-                            const maxV = Math.max(...m.chart.data.map(d => d.value), 1);
-                            return m.chart.data.map((ci, cIdx) => {
-                              const pct = Math.min(100, Math.max(12, (ci.value / maxV) * 100));
-                              return (
-                                <div key={cIdx} className="space-y-0.5">
-                                  <div className="flex justify-between text-[10px] font-bold text-slate-700">
-                                    <span>{ci.label}</span>
-                                    <span className="font-black text-[#EA580C]">{ci.value} {ci.unit || m.chart?.unit}</span>
-                                  </div>
-                                  <div className="h-2 w-full overflow-hidden rounded-full bg-orange-100/70">
-                                    <div 
-                                      className="h-full rounded-full bg-gradient-to-r from-[#F58220] to-[#EA580C]"
-                                      style={{ width: `${pct}%` }}
-                                    />
-                                  </div>
-                                </div>
-                              );
-                            });
-                          })()}
-                        </div>
-                      </div>
+                      <ChatInteractiveChart chart={m.chart} />
                     )}
 
                     {/* Citations */}
@@ -412,7 +631,7 @@ export default function FloatingChatbot() {
             {isLoading && (
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-400 bg-orange-50/50 p-2.5 rounded-xl border border-orange-100">
                 <Bot className="h-4 w-4 animate-spin text-[#F58220]" />
-                STATIX sedang menganalisis database & membuat visualisasi...
+                STATIX sedang menganalisis database & membuat visualisasi multi-grafik...
               </div>
             )}
           </div>
@@ -423,7 +642,7 @@ export default function FloatingChatbot() {
               onClick={() => setInput("Berapa laju inflasi tahunan Sulteng?")}
               className="shrink-0 rounded-full border border-orange-200 bg-white px-2.5 py-1 hover:bg-orange-100 hover:text-[#EA580C]"
             >
-              📈 Data Inflasi
+              📈 Tren Inflasi
             </button>
             <button
               onClick={() => setInput("Bagaimana perbandingan IPM kota dan kabupaten di Sulteng?")}
@@ -432,16 +651,16 @@ export default function FloatingChatbot() {
               ❤️ IPM Daerah
             </button>
             <button
-              onClick={() => setInput("Berapa angka kemiskinan Sulteng terbaru?")}
+              onClick={() => setInput("Berapa angka kemiskinan daerah Sulteng?")}
               className="shrink-0 rounded-full border border-orange-200 bg-white px-2.5 py-1 hover:bg-orange-100 hover:text-[#EA580C]"
             >
-              📉 Kemiskinan
+              🥧 Share Kemiskinan %
             </button>
             <button
               onClick={() => setInput("Tampilkan pertumbuhan ekonomi PDRB daerah")}
               className="shrink-0 rounded-full border border-orange-200 bg-white px-2.5 py-1 hover:bg-orange-100 hover:text-[#EA580C]"
             >
-              💰 PDRB Morowali
+              💰 PDRB Ekonomi
             </button>
           </div>
 
