@@ -1,0 +1,31 @@
+{
+  "baseline": {
+    "ipm": 71.38,
+    "kemiskinan": 11.77,
+    "pdrb_growth": 11.91,
+    "pengangguran": 2.95
+  },
+  "elasticities": {
+    "edu_investment_per_10b": {
+      "delta_ipm": 0.12,
+      "delta_kem": -0.08,
+      "shap_weight": 0.35
+    },
+    "infra_investment_per_20b": {
+      "delta_ipm": 0.08,
+      "delta_kem": -0.15,
+      "shap_weight": 0.28
+    },
+    "industrial_project_per_unit": {
+      "delta_ipm": 0.05,
+      "delta_kem": -0.06,
+      "shap_weight": 0.22
+    },
+    "umkm_assistance_per_500u": {
+      "delta_ipm": 0.04,
+      "delta_kem": -0.14,
+      "shap_weight": 0.15
+    }
+  },
+  "disclaimer": "Simulasi berbasis model elastisitas ekonometrik multivariat BPS Sulteng. Hasil simulasi berstatus 'Estimated Scenario' untuk panduan perencanaan strategis daerah."
+}

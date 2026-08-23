@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laporan Komprehensif Proyek BPS AI Assistant Mobile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+    @page {
+      size: A4;
+      margin: 20mm 15mm 20mm 15mm;
+      @bottom-right {
+        content: counter(page);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 10.5pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, #002D62 0%, #0077A6 60%, #00ADEF 100%);
+      color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .header-banner h1 {
+      margin: 0 0 8px 0;
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .header-banner h2 {
+      margin: 0 0 16px 0;
+      font-size: 12pt;
+      font-weight: 400;
+      color: #bae6fd;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 9.5pt;
+      margin-top: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .meta-item strong {
+      color: #f8fafc;
+    }
+
+    .meta-item span {
+      color: #e2e8f0;
+    }
+
+    h2.section-title {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #002D62;
+      border-bottom: 2.5px solid #00ADEF;
+      padding-bottom: 6px;
+      margin-top: 30px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    h3.subsection-title {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #0369a1;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      text-align: justify;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #00ADEF;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 12px 0;
+    }
+
+    .card.success {
+      border-left-color: #10b981;
+      background: #f0fdf4;
+    }
+
+    .card.warning {
+      border-left-color: #f59e0b;
+      background: #fffbeb;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 9.5pt;
+    }
+
+    th {
+      background: #002D62;
+      color: #ffffff;
+      text-align: left;
+      padding: 8px 12px;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .badge.success {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .badge.info {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .badge.primary {
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 9pt;
+      color: #0f172a;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 8.5pt;
+      line-height: 1.4;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+
+    .test-box {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .test-box .question {
+      font-weight: 700;
+      color: #002D62;
+      margin-bottom: 6px;
+    }
+
+    .test-box .answer {
+      background: #f0f9ff;
+      border-left: 3px solid #0284c7;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 9pt;
+    }
+
+    ul, ol {
+      margin: 0 0 12px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .footer {
+      margin-top: 35px;
+      padding-top: 15px;
+      border-top: 1px solid #cbd5e1;
+      font-size: 8.5pt;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER BANNER -->
+  <div class="header-banner">
+    <h1>BPS AI ASSISTANT MOBILE</h1>
+    <h2>Laporan Komprehensif Inovasi Sistem Asisten Statistik Cerdas Berbasis Generative AI & Integrasi BPS Web API</h2>
+    
+    <div class="meta-grid">
+      <div class="meta-item"><strong>Instansi:</strong> <span>Badan Pusat Statistik RI</span></div>
+      <div class="meta-item"><strong>Status Proyek:</strong> <span class="badge success">Production Ready (Fase 1)</span></div>
+      <div class="meta-item"><strong>Versi Sistem:</strong> <span>v1.0.0 (Release Build)</span></div>
+      <div class="meta-item"><strong>Akses Cloud:</strong> <span>https://bps-ai-backend.vercel.app</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2 class="section-title">1. Ringkasan Eksekutif (Executive Summary)</h2>
+  <p>
+    Aplikasi <strong>BPS AI Assistant Mobile</strong> adalah inovasi diseminasi data statistik berbasis kecerdasan buatan (<em>Artificial Intelligence</em>) yang dirancang khusus untuk mempermudah masyarakat, akademisi, pimpinan instansi, dan pembuat kebijakan dalam mengakses, memahami, dan memanfaatkan data resmi Badan Pusat Statistik (BPS) secara instan, interaktif, dan akurat.
+  </p>
+  <p>
+    Berbeda dengan chatbot AI konvensional yang kerap mengalami <em>hallucination</em> (data fiktif atau usang), sistem ini menerapkan metode <strong>Retrieval-Augmented Generation (RAG) 2-Step Workflow</strong> yang terhubung secara <em>real-time</em> ke <strong>BPS Web API resmi (<code>webapi.bps.go.id</code>)</strong>.
+  </p>
+
+  <div class="card success">
+    <strong>Pencapaian Utama Fase 1:</strong>
+    <ul style="margin-top: 6px; margin-bottom: 0;">
+      <li>Backend Gateway telah aktif secara permanen di server cloud Vercel dengan latensi rendah.</li>
+      <li>Terkoneksi langsung ke server BPS Web API menggunakan API Key terotentikasi.</li>
+      <li>Aplikasi mobile Flutter telah berhasil dikompilasi menjadi berkas installer <strong>Release APK (<code>app-release.apk</code>)</strong> berizin internet penuh dan siap dipasang di HP Android pengguna.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2 class="section-title">2. Latar Belakang & Tujuan Strategis</h2>
+  <h3 class="subsection-title">2.1 Latar Belakang Masalah</h3>
+  <ol>
+    <li><strong>Kompleksitas Akses Data:</strong> Publik sering mengalami kesulitan menemukan data statistik spesifik di portal web yang memiliki ribuan tabel dan Berita Resmi Statistik (BRS).</li>
+    <li><strong>Kebutuhan Narasi Cepat:</strong> Pengguna memerlukan penjelasan naratif singkat yang mudah dimengerti mengenai makna indikator makro, bukan sekadar tabel angka mentah.</li>
+    <li><strong>Mitigasi Misinformasi:</strong> Menjamin bahwa seluruh rujukan angka yang diberikan kepada publik bersumber 100% dari rilis resmi BPS RI.</li>
+  </ol>
+
+  <h3 class="subsection-title">2.2 Tujuan Strategis Proyek</h3>
+  <ul>
+    <li><strong>Meningkatkan Literasi Statistik:</strong> Menyediakan sarana konsultasi cerdas mengenai definisi indikator (seperti Inflasi, PDRB, IPM, Kemiskinan, NTP, TPT).</li>
+    <li><strong>Otomatisasi Diseminasi:</strong> Menghubungkan masyarakat secara langsung ke dokumen rilis resmi (PDF BRS) hanya dalam 1 klik.</li>
+    <li><strong>Mendukung Pengambilan Kebijakan (Data-Driven Policy):</strong> Memberikan akses data indikator makro secara cepat bagi pimpinan saat rapat maupun dinas lapangan.</li>
+  </ul>
+
+  <!-- PAGE BREAK FOR CLEAN PRINTING -->
+  <div class="page-break"></div>
+
+  <!-- SECTION 3 -->
+  <h2 class="section-title">3. Arsitektur Sistem & Spesifikasi Teknologi</h2>
+  <p>
+    Sistem dibangun dengan arsitektur modular yang memisahkan lapisan antarmuka pengguna (Frontend Mobile), lapisan pemrosesan & integrasi (FastAPI Gateway), model bahasa besar (Google Gemini AI), serta basis data resmi BPS.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Komponen</th>
+        <th style="width: 35%;">Teknologi</th>
+        <th style="width: 40%;">Peran & Fungsi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frontend Mobile</strong></td>
+        <td>Flutter SDK 3.38.7 / Dart 3.10.7</td>
+        <td>Antarmuka obrolan responsif, tema resmi BPS, dan kartu UI terstruktur.</td>
+      </tr>
+      <tr>
+        <td><strong>Backend Gateway</strong></td>
+        <td>FastAPI (Python 3.13) + Uvicorn</td>
+        <td>Pengontrol logika RAG, parser intent, dan middleware CORS.</td>
+      </tr>
+      <tr>
+        <td><strong>AI Engine</strong></td>
+        <td>Google Gemini 3.7 / 3.6 / 3.5 Flash</td>
+        <td>Pemrosesan bahasa alami Indonesia, ekstraksi entitas, dan penyusunan narasi data.</td>
+      </tr>
+      <tr>
+        <td><strong>Data Provider</strong></td>
+        <td>BPS Web API (<code>webapi.bps.go.id</code>)</td>
+        <td>Sumber data statistik resmi (BRS, tabel statis, subjek, publikasi).</td>
+      </tr>
+      <tr>
+        <td><strong>Cloud Hosting</strong></td>
+        <td>Vercel Serverless Edge Cloud</td>
+        <td>Infrastruktur backend cloud aktif 24/7 dengan enkripsi HTTPS global.</td>
+      </tr>
+      <tr>
+        <td><strong>Packaging</strong></td>
+        <td>Android Release APK (45.3 MB)</td>
+        <td>Paket installer aplikasi mandiri dengan izin akses internet penuh.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Alur Data (RAG 2-Step Workflow)</h3>
+  <pre>
+1. User Input    ──> Pengguna mengetik: "Berapa inflasi Indonesia pada Juli 2026?"
+2. Step 1 Extract ──> Gemini AI mengekstrak: intent="numeric", keyword="inflasi", domain="0000"
+3. Step 2 Fetch   ──> Backend query ke BPS Web API (model=pressrelease, keyword=inflasi)
+4. Live Data In  ──> Server BPS mengembalikan data BRS Juli 2026 (Inflasi: 2,88%, IHK: 111,73)
+5. Step 3 Narate ──> Gemini AI menyusun narasi resmi + kartu data payload + sitasi dokumen PDF
+6. Rendering UI  ──> Flutter menampilkan kartu data rapi + tombol unduh PDF resmi BPS
+  </pre>
+
+  <!-- SECTION 4 -->
+  <h2 class="section-title">4. Fitur-Fitur yang Telah Selesai Diimplementasikan</h2>
+  
+  <div class="card">
+    <strong style="color: #002D62;">1. Gateway Data Riil BPS Terintegrasi (Live RAG)</strong>
+    <p style="margin-top: 4px; font-size: 9.5pt;">
+      Menjawab pertanyaan indikator makro ekonomi, ketenagakerjaan, pertanian, sensus, dan kemiskinan dengan data aktual yang diambil langsung dari server BPS.
+    </p>
+  </div>
+
+  <div class="card">
+    <strong style="color: #002D62;">2. Kartu Statistik Terstruktur & Sitasi PDF Resmi</strong>
+    <p style="margin-top: 4px; font-size: 9.5pt;">
+      Menampilkan kartu ringkasan visual berisi nama indikator, angka capaian, wilayah, periode, serta tombol pembuka dokumen rilis resmi (PDF BRS).
+    </p>
+  </div>
+
+  <div class="card">
+    <strong style="color: #002D62;">3. Multi-Model Resilience (Anti-503 Error System)</strong>
+    <p style="margin-top: 4px; font-size: 9.5pt;">
+      Mekanisme <em>failover</em> otomatis berantai antar-model (Gemini 3.7 ➡️ 3.5 ➡️ 3.6 ➡️ Flash Latest) untuk memastikan ketersediaan layanan 100% tanpa gangguan server overloaded saat demo.
+    </p>
+  </div>
+
+  <div class="card">
+    <strong style="color: #002D62;">4. Desain UI/UX Standar Resmi BPS & Zero Overflow</strong>
+    <p style="margin-top: 4px; font-size: 9.5pt;">
+      Mengadopsi palet warna resmi BPS (BPS Blue <code>#00ADEF</code>, Orange <code>#F7941D</code>, Green <code>#8CC63E</code>) dengan antarmuka yang dioptimasi bebas garis kuning-hitam pada seluruh ukuran layar.
+    </p>
+  </div>
+
+  <!-- PAGE BREAK -->
+  <div class="page-break"></div>
+
+  <!-- SECTION 5 -->
+  <h2 class="section-title">5. Hasil Pengujian Sistem (Testing & Validation)</h2>
+
+  <div class="test-box">
+    <div class="question">🧪 Uji Coba 1: Data Angka Indikator Terkini BPS</div>
+    <p style="margin-bottom: 6px;"><strong>Pertanyaan:</strong> <em>"Berapa inflasi Indonesia pada Juli 2026?"</em></p>
+    <div class="answer">
+      <strong>Hasil Output Sistem:</strong><br>
+      • <strong>Status:</strong> Success (200 OK)<br>
+      • <strong>Indikator:</strong> Inflasi Year-on-Year (y-on-y)<br>
+      • <strong>Nilai Data:</strong> 2,88 persen (IHK: 111,73)<br>
+      • <strong>Periode:</strong> Juli 2026 | <strong>Wilayah:</strong> Indonesia<br>
+      • <strong>Sumber Sitasi:</strong> <em>Inflasi year-on-year (y-on-y) pada Juli 2026 sebesar 2,88 persen.</em> (Tersedia tautan unduh PDF resmi).
+    </div>
+  </div>
+
+  <div class="test-box">
+    <div class="question">🧪 Uji Coba 2: Data Proyeksi Sensus Penduduk</div>
+    <p style="margin-bottom: 6px;"><strong>Pertanyaan:</strong> <em>"Berapa jumlah penduduk indonesia tahun 2025"</em></p>
+    <div class="answer">
+      <strong>Hasil Output Sistem:</strong><br>
+      • <strong>Status:</strong> Success (200 OK)<br>
+      • <strong>Nilai Proyeksi:</strong> 284,43 juta jiwa<br>
+      • <strong>Metode Rujukan:</strong> Proyeksi Penduduk Indonesia 2020-2050 Hasil Sensus Penduduk 2020 (SP2020) Skenario Tren.<br>
+      • <strong>Penerbit:</strong> Badan Pusat Statistik & Kementerian PPN/Bappenas.
+    </div>
+  </div>
+
+  <div class="test-box">
+    <div class="question">🧪 Uji Coba 3: Pertanyaan Konsep Statistik</div>
+    <p style="margin-bottom: 6px;"><strong>Pertanyaan:</strong> <em>"Apa itu inflasi?"</em></p>
+    <div class="answer">
+      <strong>Hasil Output Sistem:</strong><br>
+      • <strong>Status:</strong> Success (200 OK) | <strong>Intent:</strong> Knowledge<br>
+      • <strong>Narasi:</strong> Penjelasan konsep kenaikan harga barang/jasa secara umum yang dipantau melalui Indeks Harga Konsumen (IHK) di kota-kota pantauan BPS di seluruh Indonesia.
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <h2 class="section-title">6. Rencana & Roadmap Pengembangan Lanjutan</h2>
+  <p>
+    Untuk membawa aplikasi BPS AI Mobile menjadi <strong>Produk Unggulan Nasional (Flagship App BPS RI)</strong>, berikut rekomendasi rencana pengembangan fase selanjutnya:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Fitur</th>
+        <th style="width: 45%;">Deskripsi Pengembangan</th>
+        <th style="width: 30%;">Dampak Strategis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>📊 Grafik Interaktif</strong></td>
+        <td>Visualisasi grafik garis (<em>Line Chart</em>) & batang (<em>Bar Chart</em>) otomatis menggunakan <code>fl_chart</code> untuk data tren waktu.</td>
+        <td>Pimpinan dapat melihat tren data historis secara visual dalam hitungan detik.</td>
+      </tr>
+      <tr>
+        <td><strong>⚖️ Komparasi Wilayah</strong></td>
+        <td>Tabel perbandingan berdampingan (<em>Side-by-side comparison</em>) antar-provinsi atau kab/kota lengkap dengan kalkulasi selisih.</td>
+        <td>Mempermudah evaluasi disparitas pembangunan daerah bagi pemerintah daerah.</td>
+      </tr>
+      <tr>
+        <td><strong>🛡️ Smart Policy Bridging</strong></td>
+        <td>Menghubungkan pertanyaan program pemerintah (MBG, IKN, Bansos) ke dataset BPS terkait (Susenas, Gizi/PoU, Kemiskinan).</td>
+        <td>Memposisikan BPS sebagai pusat rujukan data pengawalan kebijakan nasional.</td>
+      </tr>
+      <tr>
+        <td><strong>🎙️ Voice Assistant</strong></td>
+        <td>Fitur tanya lewat suara (<em>Speech-to-Text</em>) dan pembaca audio ringkasan data (<em>Text-to-Speech</em>) berbahasa Indonesia.</td>
+        <td>Meningkatkan aksesibilitas bagi pimpinan saat mobile serta pengguna disabilitas netra.</td>
+      </tr>
+      <tr>
+        <td><strong>📤 Ekspor PDF & WhatsApp</strong></td>
+        <td>Tombol ekspor dokumen Ringkasan Eksekutif resmi BPS berformat PDF dan fitur berbagi kartu ringkasan ke WhatsApp.</td>
+        <td>Mempercepat penyebaran bahan paparan rapat dan diseminasi media massa.</td>
+      </tr>
+      <tr>
+        <td><strong>🔔 Live BRS Feed</strong></td>
+        <td>Tab dashboard indikator makro dan feed rilis Berita Resmi Statistik harian dari server BPS.</td>
+        <td>Menjadi portal pemantauan indikator strategis harian pimpinan.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 7 -->
+  <h2 class="section-title">7. Kesimpulan & Penutup</h2>
+  <p>
+    Pengembangan <strong>BPS AI Assistant Mobile (Fase 1)</strong> telah berhasil diselesaikan dengan sukses, memenuhi seluruh standar fungsional, performa, serta keandalan integrasi data resmi BPS.
+  </p>
+  <p>
+    Aplikasi ini siap dipresentasikan di hadapan pimpinan sebagai bukti nyata inovasi digitalisasi dan modernisasi diseminasi data statistik Badan Pusat Statistik Republik Indonesia menuju era keterbukaan data yang inklusif, modern, dan akurat.
+  </p>
+
+  <div class="footer">
+    <span>Dokumentasi Resmi Proyek Magang BPS AI Mobile Assistant</span>
+    <span>Badan Pusat Statistik Republik Indonesia © 2026</span>
+  </div>
+
+</body>
+</html>

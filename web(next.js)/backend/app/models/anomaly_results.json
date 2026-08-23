@@ -1,0 +1,47 @@
+{
+  "total_checked": 13,
+  "anomalies_detected": 3,
+  "model": "Isolation Forest (Contamination=0.20)",
+  "anomalies": [
+    {
+      "kode": "7203",
+      "wilayah": "Kabupaten Morowali",
+      "indicator": "Pertumbuhan PDRB (+24.85%)",
+      "severity": "High (Outlier Signifikan)",
+      "score": -0.84,
+      "is_anomaly": true,
+      "explanation": "Lonjakan PDRB riil mencapai Rp 64,2 Triliun merupakan anomali positif ekstrem di luar 3 standar deviasi provinsi, didorong oleh akselerasi smelter nikel dan investasi industri pengolahan.",
+      "recommendation": "Perkuat sinergi penyerapan tenaga kerja lokal dan hilirisasi rantai pasok UMKM di sekitar kawasan industri."
+    },
+    {
+      "kode": "7212",
+      "wilayah": "Kabupaten Morowali Utara",
+      "indicator": "Laju Pertumbuhan Ekonomi (+21.40%)",
+      "severity": "High (Outlier Signifikan)",
+      "score": -0.76,
+      "is_anomaly": true,
+      "explanation": "PDRB bertumbuh lebih dari 20% dalam 3 tahun berturut-turut, memisahkan wilayah ini dari trajektori konvensional Sulawesi Tengah.",
+      "recommendation": "Monitor potensi kesenjangan daya beli dan perkuat mitigasi inflasi komoditas pangan lokal."
+    },
+    {
+      "kode": "7205",
+      "wilayah": "Kabupaten Donggala",
+      "indicator": "Tingkat Kemiskinan (16.48%) vs Kedekatan Ibukota",
+      "severity": "Medium (Disparitas Spasial)",
+      "score": -0.58,
+      "is_anomaly": true,
+      "explanation": "Meskipun berbatasan langsung dengan Kota Palu (pusat ekonomi), angka kemiskinan Donggala tetap merupakan salah satu yang tertinggi di Sulteng.",
+      "recommendation": "Tingkatkan konektivitas koridor Palu-Donggala serta program jaminan sosial terpadu bagi nelayan pesisir."
+    },
+    {
+      "kode": "7271",
+      "wilayah": "Kota Palu",
+      "indicator": "IPM 82.52 (Sangat Tinggi)",
+      "severity": "Normal (Pencapaian Prima)",
+      "score": 0.32,
+      "is_anomaly": false,
+      "explanation": "IPM berada pada level tertinggi di Sulawesi Tengah, stabil di atas angka rata-rata nasional (74.39).",
+      "recommendation": "Pertahankan kualitas layanan kesehatan dan pendidikan tinggi."
+    }
+  ]
+}
