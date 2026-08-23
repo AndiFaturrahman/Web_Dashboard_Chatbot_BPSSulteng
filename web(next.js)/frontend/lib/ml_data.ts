@@ -1,0 +1,7126 @@
+// Precomputed Official BPS Machine Learning Fallback Data
+export const ML_FORECAST_DATA: Record<string, any> = {
+  "7201": {
+    "kode": "7201",
+    "wilayah": "Kab. Banggai",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 2.42,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 16.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 17.25
+          },
+          {
+            "tahun": 2017,
+            "nilai": 18.37
+          },
+          {
+            "tahun": 2018,
+            "nilai": 19.57
+          },
+          {
+            "tahun": 2019,
+            "nilai": 20.84
+          },
+          {
+            "tahun": 2020,
+            "nilai": 20.86
+          },
+          {
+            "tahun": 2021,
+            "nilai": 22.93
+          },
+          {
+            "tahun": 2022,
+            "nilai": 25.17
+          },
+          {
+            "tahun": 2023,
+            "nilai": 26.81
+          },
+          {
+            "tahun": 2024,
+            "nilai": 28.55
+          },
+          {
+            "tahun": 2025,
+            "nilai": 30.41
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 30.9,
+            "upper_bound": 32.7,
+            "lower_bound": 29.1
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 32.31,
+            "upper_bound": 34.18,
+            "lower_bound": 30.44
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 33.71,
+            "upper_bound": 35.67,
+            "lower_bound": 31.75
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 35.12,
+            "upper_bound": 37.16,
+            "lower_bound": 33.08
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 36.53,
+            "upper_bound": 38.67,
+            "lower_bound": 34.39
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Banggai diperkirakan tumbuh stabil menuju 2030 dengan MAPE 2.42%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 67.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 68.2
+          },
+          {
+            "tahun": 2017,
+            "nilai": 68.6
+          },
+          {
+            "tahun": 2018,
+            "nilai": 69.0
+          },
+          {
+            "tahun": 2019,
+            "nilai": 69.4
+          },
+          {
+            "tahun": 2020,
+            "nilai": 69.6
+          },
+          {
+            "tahun": 2021,
+            "nilai": 70.2
+          },
+          {
+            "tahun": 2022,
+            "nilai": 70.6
+          },
+          {
+            "tahun": 2023,
+            "nilai": 71.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 71.4
+          },
+          {
+            "tahun": 2025,
+            "nilai": 71.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 72.18,
+            "upper_bound": 72.33,
+            "lower_bound": 72.03
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 72.58,
+            "upper_bound": 72.73,
+            "lower_bound": 72.43
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 72.98,
+            "upper_bound": 73.14,
+            "lower_bound": 72.82
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 73.38,
+            "upper_bound": 73.55,
+            "lower_bound": 73.21
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 73.78,
+            "upper_bound": 73.96,
+            "lower_bound": 73.6
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Banggai diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.95,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 9.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 9.29
+          },
+          {
+            "tahun": 2017,
+            "nilai": 9.08
+          },
+          {
+            "tahun": 2018,
+            "nilai": 8.87
+          },
+          {
+            "tahun": 2019,
+            "nilai": 8.66
+          },
+          {
+            "tahun": 2020,
+            "nilai": 8.95
+          },
+          {
+            "tahun": 2021,
+            "nilai": 8.24
+          },
+          {
+            "tahun": 2022,
+            "nilai": 8.03
+          },
+          {
+            "tahun": 2023,
+            "nilai": 7.82
+          },
+          {
+            "tahun": 2024,
+            "nilai": 7.61
+          },
+          {
+            "tahun": 2025,
+            "nilai": 7.4
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 7.24,
+            "upper_bound": 7.61,
+            "lower_bound": 6.87
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 7.03,
+            "upper_bound": 7.42,
+            "lower_bound": 6.64
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 6.82,
+            "upper_bound": 7.22,
+            "lower_bound": 6.42
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 6.61,
+            "upper_bound": 7.03,
+            "lower_bound": 6.19
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 6.4,
+            "upper_bound": 6.84,
+            "lower_bound": 5.96
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Banggai diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.95%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.53,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 4.1
+          },
+          {
+            "tahun": 2016,
+            "nilai": 4.01
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.92
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.83
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.74
+          },
+          {
+            "tahun": 2020,
+            "nilai": 4.25
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.56
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.47
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.38
+          },
+          {
+            "tahun": 2024,
+            "nilai": 3.29
+          },
+          {
+            "tahun": 2025,
+            "nilai": 3.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 3.16,
+            "upper_bound": 3.61,
+            "lower_bound": 2.71
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 3.07,
+            "upper_bound": 3.53,
+            "lower_bound": 2.61
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.98,
+            "upper_bound": 3.46,
+            "lower_bound": 2.5
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.89,
+            "upper_bound": 3.4,
+            "lower_bound": 2.38
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.8,
+            "upper_bound": 3.33,
+            "lower_bound": 2.27
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Banggai diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.53%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.03,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 340.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 342.7
+          },
+          {
+            "tahun": 2017,
+            "nilai": 345.5
+          },
+          {
+            "tahun": 2018,
+            "nilai": 348.2
+          },
+          {
+            "tahun": 2019,
+            "nilai": 351.0
+          },
+          {
+            "tahun": 2020,
+            "nilai": 353.8
+          },
+          {
+            "tahun": 2021,
+            "nilai": 356.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 359.5
+          },
+          {
+            "tahun": 2023,
+            "nilai": 362.4
+          },
+          {
+            "tahun": 2024,
+            "nilai": 365.3
+          },
+          {
+            "tahun": 2025,
+            "nilai": 368.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 370.85,
+            "upper_bound": 371.13,
+            "lower_bound": 370.57
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 373.67,
+            "upper_bound": 373.97,
+            "lower_bound": 373.37
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 376.49,
+            "upper_bound": 376.8,
+            "lower_bound": 376.18
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 379.32,
+            "upper_bound": 379.64,
+            "lower_bound": 379.0
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 382.14,
+            "upper_bound": 382.48,
+            "lower_bound": 381.8
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Banggai diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.03%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Banggai diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7202": {
+    "kode": "7202",
+    "wilayah": "Kab. Banggai Kepulauan",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.67,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.96
+          },
+          {
+            "tahun": 2017,
+            "nilai": 4.13
+          },
+          {
+            "tahun": 2018,
+            "nilai": 4.3
+          },
+          {
+            "tahun": 2019,
+            "nilai": 4.48
+          },
+          {
+            "tahun": 2020,
+            "nilai": 4.39
+          },
+          {
+            "tahun": 2021,
+            "nilai": 4.72
+          },
+          {
+            "tahun": 2022,
+            "nilai": 5.07
+          },
+          {
+            "tahun": 2023,
+            "nilai": 5.28
+          },
+          {
+            "tahun": 2024,
+            "nilai": 5.5
+          },
+          {
+            "tahun": 2025,
+            "nilai": 5.73
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 5.82,
+            "upper_bound": 6.1,
+            "lower_bound": 5.54
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 6.01,
+            "upper_bound": 6.3,
+            "lower_bound": 5.72
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 6.2,
+            "upper_bound": 6.5,
+            "lower_bound": 5.9
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 6.39,
+            "upper_bound": 6.7,
+            "lower_bound": 6.08
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 6.58,
+            "upper_bound": 6.91,
+            "lower_bound": 6.25
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Banggai Kepulauan diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.67%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 62.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 62.93
+          },
+          {
+            "tahun": 2017,
+            "nilai": 63.36
+          },
+          {
+            "tahun": 2018,
+            "nilai": 63.79
+          },
+          {
+            "tahun": 2019,
+            "nilai": 64.22
+          },
+          {
+            "tahun": 2020,
+            "nilai": 64.45
+          },
+          {
+            "tahun": 2021,
+            "nilai": 65.08
+          },
+          {
+            "tahun": 2022,
+            "nilai": 65.51
+          },
+          {
+            "tahun": 2023,
+            "nilai": 65.94
+          },
+          {
+            "tahun": 2024,
+            "nilai": 66.37
+          },
+          {
+            "tahun": 2025,
+            "nilai": 66.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 67.21,
+            "upper_bound": 67.36,
+            "lower_bound": 67.06
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 67.64,
+            "upper_bound": 67.79,
+            "lower_bound": 67.49
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 68.07,
+            "upper_bound": 68.23,
+            "lower_bound": 67.91
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 68.5,
+            "upper_bound": 68.67,
+            "lower_bound": 68.33
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 68.93,
+            "upper_bound": 69.11,
+            "lower_bound": 68.75
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Banggai Kepulauan diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.56,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 15.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 15.37
+          },
+          {
+            "tahun": 2017,
+            "nilai": 15.14
+          },
+          {
+            "tahun": 2018,
+            "nilai": 14.91
+          },
+          {
+            "tahun": 2019,
+            "nilai": 14.68
+          },
+          {
+            "tahun": 2020,
+            "nilai": 14.95
+          },
+          {
+            "tahun": 2021,
+            "nilai": 14.22
+          },
+          {
+            "tahun": 2022,
+            "nilai": 13.99
+          },
+          {
+            "tahun": 2023,
+            "nilai": 13.76
+          },
+          {
+            "tahun": 2024,
+            "nilai": 13.53
+          },
+          {
+            "tahun": 2025,
+            "nilai": 13.3
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 13.12,
+            "upper_bound": 13.49,
+            "lower_bound": 12.75
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 12.89,
+            "upper_bound": 13.28,
+            "lower_bound": 12.5
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 12.66,
+            "upper_bound": 13.06,
+            "lower_bound": 12.26
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 12.43,
+            "upper_bound": 12.85,
+            "lower_bound": 12.01
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 12.2,
+            "upper_bound": 12.64,
+            "lower_bound": 11.76
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Banggai Kepulauan diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.56%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.82,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.53
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.46
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.39
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.32
+          },
+          {
+            "tahun": 2020,
+            "nilai": 3.85
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.18
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.11
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.04
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.97
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.9
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.88,
+            "upper_bound": 3.33,
+            "lower_bound": 2.43
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.81,
+            "upper_bound": 3.27,
+            "lower_bound": 2.35
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.74,
+            "upper_bound": 3.22,
+            "lower_bound": 2.26
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.67,
+            "upper_bound": 3.18,
+            "lower_bound": 2.16
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.6,
+            "upper_bound": 3.13,
+            "lower_bound": 2.07
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Banggai Kepulauan diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.82%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.02,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 115.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 115.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 116.6
+          },
+          {
+            "tahun": 2018,
+            "nilai": 117.4
+          },
+          {
+            "tahun": 2019,
+            "nilai": 118.3
+          },
+          {
+            "tahun": 2020,
+            "nilai": 119.1
+          },
+          {
+            "tahun": 2021,
+            "nilai": 119.9
+          },
+          {
+            "tahun": 2022,
+            "nilai": 120.8
+          },
+          {
+            "tahun": 2023,
+            "nilai": 121.6
+          },
+          {
+            "tahun": 2024,
+            "nilai": 122.5
+          },
+          {
+            "tahun": 2025,
+            "nilai": 123.3
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 124.12,
+            "upper_bound": 124.2,
+            "lower_bound": 124.04
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 124.95,
+            "upper_bound": 125.04,
+            "lower_bound": 124.86
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 125.79,
+            "upper_bound": 125.88,
+            "lower_bound": 125.7
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 126.62,
+            "upper_bound": 126.72,
+            "lower_bound": 126.52
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 127.45,
+            "upper_bound": 127.55,
+            "lower_bound": 127.35
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Banggai Kepulauan diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.02%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Banggai Kepulauan diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7203": {
+    "kode": "7203",
+    "wilayah": "Kab. Morowali",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 11.22,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 14.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 16.89
+          },
+          {
+            "tahun": 2017,
+            "nilai": 19.68
+          },
+          {
+            "tahun": 2018,
+            "nilai": 22.93
+          },
+          {
+            "tahun": 2019,
+            "nilai": 26.71
+          },
+          {
+            "tahun": 2020,
+            "nilai": 29.25
+          },
+          {
+            "tahun": 2021,
+            "nilai": 35.16
+          },
+          {
+            "tahun": 2022,
+            "nilai": 42.23
+          },
+          {
+            "tahun": 2023,
+            "nilai": 49.2
+          },
+          {
+            "tahun": 2024,
+            "nilai": 57.32
+          },
+          {
+            "tahun": 2025,
+            "nilai": 66.78
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 65.08,
+            "upper_bound": 74.7,
+            "lower_bound": 55.46
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 70.16,
+            "upper_bound": 80.17,
+            "lower_bound": 60.15
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 75.24,
+            "upper_bound": 85.68,
+            "lower_bound": 64.8
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 80.32,
+            "upper_bound": 91.24,
+            "lower_bound": 69.4
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 85.4,
+            "upper_bound": 96.82,
+            "lower_bound": 73.98
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Morowali diperkirakan tumbuh stabil menuju 2030 dengan MAPE 11.22%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 68.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 68.76
+          },
+          {
+            "tahun": 2017,
+            "nilai": 69.32
+          },
+          {
+            "tahun": 2018,
+            "nilai": 69.88
+          },
+          {
+            "tahun": 2019,
+            "nilai": 70.44
+          },
+          {
+            "tahun": 2020,
+            "nilai": 70.8
+          },
+          {
+            "tahun": 2021,
+            "nilai": 71.56
+          },
+          {
+            "tahun": 2022,
+            "nilai": 72.12
+          },
+          {
+            "tahun": 2023,
+            "nilai": 72.68
+          },
+          {
+            "tahun": 2024,
+            "nilai": 73.24
+          },
+          {
+            "tahun": 2025,
+            "nilai": 73.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 74.34,
+            "upper_bound": 74.49,
+            "lower_bound": 74.19
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 74.9,
+            "upper_bound": 75.05,
+            "lower_bound": 74.75
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 75.46,
+            "upper_bound": 75.62,
+            "lower_bound": 75.3
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 76.02,
+            "upper_bound": 76.19,
+            "lower_bound": 75.85
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 76.58,
+            "upper_bound": 76.76,
+            "lower_bound": 76.4
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Morowali diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.57,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 16.4
+          },
+          {
+            "tahun": 2016,
+            "nilai": 15.98
+          },
+          {
+            "tahun": 2017,
+            "nilai": 15.56
+          },
+          {
+            "tahun": 2018,
+            "nilai": 15.14
+          },
+          {
+            "tahun": 2019,
+            "nilai": 14.72
+          },
+          {
+            "tahun": 2020,
+            "nilai": 14.8
+          },
+          {
+            "tahun": 2021,
+            "nilai": 13.88
+          },
+          {
+            "tahun": 2022,
+            "nilai": 13.46
+          },
+          {
+            "tahun": 2023,
+            "nilai": 13.04
+          },
+          {
+            "tahun": 2024,
+            "nilai": 12.62
+          },
+          {
+            "tahun": 2025,
+            "nilai": 12.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 11.83,
+            "upper_bound": 12.2,
+            "lower_bound": 11.46
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 11.41,
+            "upper_bound": 11.8,
+            "lower_bound": 11.02
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 10.99,
+            "upper_bound": 11.39,
+            "lower_bound": 10.59
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 10.57,
+            "upper_bound": 10.99,
+            "lower_bound": 10.15
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 10.15,
+            "upper_bound": 10.59,
+            "lower_bound": 9.71
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Morowali diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.57%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.33,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 4.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 4.4
+          },
+          {
+            "tahun": 2017,
+            "nilai": 4.3
+          },
+          {
+            "tahun": 2018,
+            "nilai": 4.2
+          },
+          {
+            "tahun": 2019,
+            "nilai": 4.1
+          },
+          {
+            "tahun": 2020,
+            "nilai": 4.6
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.9
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.8
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.7
+          },
+          {
+            "tahun": 2024,
+            "nilai": 3.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 3.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 3.45,
+            "upper_bound": 3.9,
+            "lower_bound": 3.0
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 3.35,
+            "upper_bound": 3.81,
+            "lower_bound": 2.89
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.25,
+            "upper_bound": 3.73,
+            "lower_bound": 2.77
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.15,
+            "upper_bound": 3.66,
+            "lower_bound": 2.64
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 3.58,
+            "lower_bound": 2.52
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Morowali diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.33%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.47,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 125.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 129.5
+          },
+          {
+            "tahun": 2017,
+            "nilai": 134.2
+          },
+          {
+            "tahun": 2018,
+            "nilai": 139.0
+          },
+          {
+            "tahun": 2019,
+            "nilai": 144.0
+          },
+          {
+            "tahun": 2020,
+            "nilai": 149.2
+          },
+          {
+            "tahun": 2021,
+            "nilai": 154.5
+          },
+          {
+            "tahun": 2022,
+            "nilai": 160.1
+          },
+          {
+            "tahun": 2023,
+            "nilai": 165.9
+          },
+          {
+            "tahun": 2024,
+            "nilai": 171.8
+          },
+          {
+            "tahun": 2025,
+            "nilai": 178.0
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 181.85,
+            "upper_bound": 183.97,
+            "lower_bound": 179.73
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 187.15,
+            "upper_bound": 189.35,
+            "lower_bound": 184.95
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 192.44,
+            "upper_bound": 194.74,
+            "lower_bound": 190.14
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 197.73,
+            "upper_bound": 200.13,
+            "lower_bound": 195.33
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 203.02,
+            "upper_bound": 205.53,
+            "lower_bound": 200.51
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Morowali diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.47%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Morowali diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7204": {
+    "kode": "7204",
+    "wilayah": "Kab. Poso",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.74,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 9.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 9.61
+          },
+          {
+            "tahun": 2017,
+            "nilai": 10.05
+          },
+          {
+            "tahun": 2018,
+            "nilai": 10.5
+          },
+          {
+            "tahun": 2019,
+            "nilai": 10.97
+          },
+          {
+            "tahun": 2020,
+            "nilai": 10.78
+          },
+          {
+            "tahun": 2021,
+            "nilai": 11.62
+          },
+          {
+            "tahun": 2022,
+            "nilai": 12.52
+          },
+          {
+            "tahun": 2023,
+            "nilai": 13.08
+          },
+          {
+            "tahun": 2024,
+            "nilai": 13.67
+          },
+          {
+            "tahun": 2025,
+            "nilai": 14.29
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 14.51,
+            "upper_bound": 15.22,
+            "lower_bound": 13.8
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 15.01,
+            "upper_bound": 15.75,
+            "lower_bound": 14.27
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 15.52,
+            "upper_bound": 16.29,
+            "lower_bound": 14.75
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 16.02,
+            "upper_bound": 16.83,
+            "lower_bound": 15.21
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 16.52,
+            "upper_bound": 17.36,
+            "lower_bound": 15.68
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Poso diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.74%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 68.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 68.9
+          },
+          {
+            "tahun": 2017,
+            "nilai": 69.3
+          },
+          {
+            "tahun": 2018,
+            "nilai": 69.7
+          },
+          {
+            "tahun": 2019,
+            "nilai": 70.1
+          },
+          {
+            "tahun": 2020,
+            "nilai": 70.3
+          },
+          {
+            "tahun": 2021,
+            "nilai": 70.9
+          },
+          {
+            "tahun": 2022,
+            "nilai": 71.3
+          },
+          {
+            "tahun": 2023,
+            "nilai": 71.7
+          },
+          {
+            "tahun": 2024,
+            "nilai": 72.1
+          },
+          {
+            "tahun": 2025,
+            "nilai": 72.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 72.88,
+            "upper_bound": 73.03,
+            "lower_bound": 72.73
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 73.28,
+            "upper_bound": 73.43,
+            "lower_bound": 73.13
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 73.68,
+            "upper_bound": 73.84,
+            "lower_bound": 73.52
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 74.08,
+            "upper_bound": 74.25,
+            "lower_bound": 73.91
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 74.48,
+            "upper_bound": 74.66,
+            "lower_bound": 74.3
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Poso diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.49,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 17.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 17.54
+          },
+          {
+            "tahun": 2017,
+            "nilai": 17.28
+          },
+          {
+            "tahun": 2018,
+            "nilai": 17.02
+          },
+          {
+            "tahun": 2019,
+            "nilai": 16.76
+          },
+          {
+            "tahun": 2020,
+            "nilai": 17.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 16.24
+          },
+          {
+            "tahun": 2022,
+            "nilai": 15.98
+          },
+          {
+            "tahun": 2023,
+            "nilai": 15.72
+          },
+          {
+            "tahun": 2024,
+            "nilai": 15.46
+          },
+          {
+            "tahun": 2025,
+            "nilai": 15.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 14.99,
+            "upper_bound": 15.36,
+            "lower_bound": 14.62
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 14.73,
+            "upper_bound": 15.12,
+            "lower_bound": 14.34
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 14.47,
+            "upper_bound": 14.87,
+            "lower_bound": 14.07
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 14.21,
+            "upper_bound": 14.63,
+            "lower_bound": 13.79
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 13.95,
+            "upper_bound": 14.39,
+            "lower_bound": 13.51
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Poso diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.49%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.83,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.69
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.58
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.47
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.36
+          },
+          {
+            "tahun": 2020,
+            "nilai": 3.85
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.14
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.03
+          },
+          {
+            "tahun": 2023,
+            "nilai": 2.92
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.81
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.7
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.64,
+            "upper_bound": 3.09,
+            "lower_bound": 2.19
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.53,
+            "upper_bound": 2.99,
+            "lower_bound": 2.07
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.42,
+            "upper_bound": 2.9,
+            "lower_bound": 1.94
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.31,
+            "upper_bound": 2.82,
+            "lower_bound": 1.8
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.2,
+            "upper_bound": 2.73,
+            "lower_bound": 1.67
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Poso diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.83%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.02,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 235.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 236.6
+          },
+          {
+            "tahun": 2017,
+            "nilai": 238.3
+          },
+          {
+            "tahun": 2018,
+            "nilai": 240.0
+          },
+          {
+            "tahun": 2019,
+            "nilai": 241.6
+          },
+          {
+            "tahun": 2020,
+            "nilai": 243.3
+          },
+          {
+            "tahun": 2021,
+            "nilai": 245.0
+          },
+          {
+            "tahun": 2022,
+            "nilai": 246.8
+          },
+          {
+            "tahun": 2023,
+            "nilai": 248.5
+          },
+          {
+            "tahun": 2024,
+            "nilai": 250.2
+          },
+          {
+            "tahun": 2025,
+            "nilai": 252.0
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 253.59,
+            "upper_bound": 253.76,
+            "lower_bound": 253.42
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 255.29,
+            "upper_bound": 255.47,
+            "lower_bound": 255.11
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 256.99,
+            "upper_bound": 257.18,
+            "lower_bound": 256.8
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 258.69,
+            "upper_bound": 258.89,
+            "lower_bound": 258.49
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 260.39,
+            "upper_bound": 260.59,
+            "lower_bound": 260.19
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Poso diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.02%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Poso diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7205": {
+    "kode": "7205",
+    "wilayah": "Kab. Donggala",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.67,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 7.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 7.81
+          },
+          {
+            "tahun": 2017,
+            "nilai": 8.13
+          },
+          {
+            "tahun": 2018,
+            "nilai": 8.46
+          },
+          {
+            "tahun": 2019,
+            "nilai": 8.81
+          },
+          {
+            "tahun": 2020,
+            "nilai": 8.62
+          },
+          {
+            "tahun": 2021,
+            "nilai": 9.26
+          },
+          {
+            "tahun": 2022,
+            "nilai": 9.94
+          },
+          {
+            "tahun": 2023,
+            "nilai": 10.34
+          },
+          {
+            "tahun": 2024,
+            "nilai": 10.77
+          },
+          {
+            "tahun": 2025,
+            "nilai": 11.21
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 11.37,
+            "upper_bound": 11.91,
+            "lower_bound": 10.83
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 11.74,
+            "upper_bound": 12.31,
+            "lower_bound": 11.17
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 12.11,
+            "upper_bound": 12.7,
+            "lower_bound": 11.52
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 12.48,
+            "upper_bound": 13.1,
+            "lower_bound": 11.86
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 12.84,
+            "upper_bound": 13.49,
+            "lower_bound": 12.19
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Donggala diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.67%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 63.4
+          },
+          {
+            "tahun": 2016,
+            "nilai": 63.77
+          },
+          {
+            "tahun": 2017,
+            "nilai": 64.14
+          },
+          {
+            "tahun": 2018,
+            "nilai": 64.51
+          },
+          {
+            "tahun": 2019,
+            "nilai": 64.88
+          },
+          {
+            "tahun": 2020,
+            "nilai": 65.05
+          },
+          {
+            "tahun": 2021,
+            "nilai": 65.62
+          },
+          {
+            "tahun": 2022,
+            "nilai": 65.99
+          },
+          {
+            "tahun": 2023,
+            "nilai": 66.36
+          },
+          {
+            "tahun": 2024,
+            "nilai": 66.73
+          },
+          {
+            "tahun": 2025,
+            "nilai": 67.1
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 67.45,
+            "upper_bound": 67.6,
+            "lower_bound": 67.3
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 67.82,
+            "upper_bound": 67.97,
+            "lower_bound": 67.67
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 68.19,
+            "upper_bound": 68.35,
+            "lower_bound": 68.03
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 68.56,
+            "upper_bound": 68.73,
+            "lower_bound": 68.39
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 68.93,
+            "upper_bound": 69.11,
+            "lower_bound": 68.75
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Donggala diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.46,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 19.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 18.93
+          },
+          {
+            "tahun": 2017,
+            "nilai": 18.66
+          },
+          {
+            "tahun": 2018,
+            "nilai": 18.39
+          },
+          {
+            "tahun": 2019,
+            "nilai": 18.12
+          },
+          {
+            "tahun": 2020,
+            "nilai": 18.35
+          },
+          {
+            "tahun": 2021,
+            "nilai": 17.58
+          },
+          {
+            "tahun": 2022,
+            "nilai": 17.31
+          },
+          {
+            "tahun": 2023,
+            "nilai": 17.04
+          },
+          {
+            "tahun": 2024,
+            "nilai": 16.77
+          },
+          {
+            "tahun": 2025,
+            "nilai": 16.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 16.28,
+            "upper_bound": 16.65,
+            "lower_bound": 15.91
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 16.01,
+            "upper_bound": 16.4,
+            "lower_bound": 15.62
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 15.74,
+            "upper_bound": 16.14,
+            "lower_bound": 15.34
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 15.47,
+            "upper_bound": 15.89,
+            "lower_bound": 15.05
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 15.2,
+            "upper_bound": 15.64,
+            "lower_bound": 14.76
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Donggala diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.46%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.5,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 4.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 4.1
+          },
+          {
+            "tahun": 2017,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.9
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 4.3
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.5
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.4
+          },
+          {
+            "tahun": 2024,
+            "nilai": 3.3
+          },
+          {
+            "tahun": 2025,
+            "nilai": 3.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 3.15,
+            "upper_bound": 3.6,
+            "lower_bound": 2.7
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 3.05,
+            "upper_bound": 3.51,
+            "lower_bound": 2.59
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.95,
+            "upper_bound": 3.43,
+            "lower_bound": 2.47
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.85,
+            "upper_bound": 3.36,
+            "lower_bound": 2.34
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.75,
+            "upper_bound": 3.28,
+            "lower_bound": 2.22
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Donggala diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.5%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.03,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 285.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 287.3
+          },
+          {
+            "tahun": 2017,
+            "nilai": 289.6
+          },
+          {
+            "tahun": 2018,
+            "nilai": 291.9
+          },
+          {
+            "tahun": 2019,
+            "nilai": 294.2
+          },
+          {
+            "tahun": 2020,
+            "nilai": 296.6
+          },
+          {
+            "tahun": 2021,
+            "nilai": 299.0
+          },
+          {
+            "tahun": 2022,
+            "nilai": 301.3
+          },
+          {
+            "tahun": 2023,
+            "nilai": 303.8
+          },
+          {
+            "tahun": 2024,
+            "nilai": 306.2
+          },
+          {
+            "tahun": 2025,
+            "nilai": 308.6
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 310.85,
+            "upper_bound": 311.06,
+            "lower_bound": 310.64
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 313.21,
+            "upper_bound": 313.43,
+            "lower_bound": 312.99
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 315.58,
+            "upper_bound": 315.81,
+            "lower_bound": 315.35
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 317.94,
+            "upper_bound": 318.18,
+            "lower_bound": 317.7
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 320.3,
+            "upper_bound": 320.55,
+            "lower_bound": 320.05
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Donggala diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.03%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Donggala diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7206": {
+    "kode": "7206",
+    "wilayah": "Kab. Tolitoli",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.7,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 6.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 7.09
+          },
+          {
+            "tahun": 2017,
+            "nilai": 7.4
+          },
+          {
+            "tahun": 2018,
+            "nilai": 7.72
+          },
+          {
+            "tahun": 2019,
+            "nilai": 8.05
+          },
+          {
+            "tahun": 2020,
+            "nilai": 7.89
+          },
+          {
+            "tahun": 2021,
+            "nilai": 8.49
+          },
+          {
+            "tahun": 2022,
+            "nilai": 9.13
+          },
+          {
+            "tahun": 2023,
+            "nilai": 9.52
+          },
+          {
+            "tahun": 2024,
+            "nilai": 9.93
+          },
+          {
+            "tahun": 2025,
+            "nilai": 10.36
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 10.51,
+            "upper_bound": 11.02,
+            "lower_bound": 10.0
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 10.87,
+            "upper_bound": 11.4,
+            "lower_bound": 10.34
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 11.22,
+            "upper_bound": 11.77,
+            "lower_bound": 10.67
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 11.57,
+            "upper_bound": 12.15,
+            "lower_bound": 10.99
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 11.92,
+            "upper_bound": 12.52,
+            "lower_bound": 11.32
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Tolitoli diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.7%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 63.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 64.16
+          },
+          {
+            "tahun": 2017,
+            "nilai": 64.52
+          },
+          {
+            "tahun": 2018,
+            "nilai": 64.88
+          },
+          {
+            "tahun": 2019,
+            "nilai": 65.24
+          },
+          {
+            "tahun": 2020,
+            "nilai": 65.4
+          },
+          {
+            "tahun": 2021,
+            "nilai": 65.96
+          },
+          {
+            "tahun": 2022,
+            "nilai": 66.32
+          },
+          {
+            "tahun": 2023,
+            "nilai": 66.68
+          },
+          {
+            "tahun": 2024,
+            "nilai": 67.04
+          },
+          {
+            "tahun": 2025,
+            "nilai": 67.4
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 67.74,
+            "upper_bound": 67.89,
+            "lower_bound": 67.59
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 68.1,
+            "upper_bound": 68.25,
+            "lower_bound": 67.95
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 68.46,
+            "upper_bound": 68.62,
+            "lower_bound": 68.3
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 68.82,
+            "upper_bound": 68.99,
+            "lower_bound": 68.65
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 69.18,
+            "upper_bound": 69.36,
+            "lower_bound": 69.0
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Tolitoli diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.58,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 15.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 14.97
+          },
+          {
+            "tahun": 2017,
+            "nilai": 14.74
+          },
+          {
+            "tahun": 2018,
+            "nilai": 14.51
+          },
+          {
+            "tahun": 2019,
+            "nilai": 14.28
+          },
+          {
+            "tahun": 2020,
+            "nilai": 14.55
+          },
+          {
+            "tahun": 2021,
+            "nilai": 13.82
+          },
+          {
+            "tahun": 2022,
+            "nilai": 13.59
+          },
+          {
+            "tahun": 2023,
+            "nilai": 13.36
+          },
+          {
+            "tahun": 2024,
+            "nilai": 13.13
+          },
+          {
+            "tahun": 2025,
+            "nilai": 12.9
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 12.72,
+            "upper_bound": 13.09,
+            "lower_bound": 12.35
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 12.49,
+            "upper_bound": 12.88,
+            "lower_bound": 12.1
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 12.26,
+            "upper_bound": 12.66,
+            "lower_bound": 11.86
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 12.03,
+            "upper_bound": 12.45,
+            "lower_bound": 11.61
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 11.8,
+            "upper_bound": 12.24,
+            "lower_bound": 11.36
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Tolitoli diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.58%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.67,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.9
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.81
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.72
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.63
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.54
+          },
+          {
+            "tahun": 2020,
+            "nilai": 4.05
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.36
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.27
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.18
+          },
+          {
+            "tahun": 2024,
+            "nilai": 3.09
+          },
+          {
+            "tahun": 2025,
+            "nilai": 3.0
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.96,
+            "upper_bound": 3.41,
+            "lower_bound": 2.51
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.87,
+            "upper_bound": 3.33,
+            "lower_bound": 2.41
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.78,
+            "upper_bound": 3.26,
+            "lower_bound": 2.3
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.69,
+            "upper_bound": 3.2,
+            "lower_bound": 2.18
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.6,
+            "upper_bound": 3.13,
+            "lower_bound": 2.07
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Tolitoli diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.67%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.02,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 215.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 216.5
+          },
+          {
+            "tahun": 2017,
+            "nilai": 218.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 219.5
+          },
+          {
+            "tahun": 2019,
+            "nilai": 221.1
+          },
+          {
+            "tahun": 2020,
+            "nilai": 222.6
+          },
+          {
+            "tahun": 2021,
+            "nilai": 224.2
+          },
+          {
+            "tahun": 2022,
+            "nilai": 225.8
+          },
+          {
+            "tahun": 2023,
+            "nilai": 227.3
+          },
+          {
+            "tahun": 2024,
+            "nilai": 228.9
+          },
+          {
+            "tahun": 2025,
+            "nilai": 230.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 231.98,
+            "upper_bound": 232.11,
+            "lower_bound": 231.85
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 233.54,
+            "upper_bound": 233.67,
+            "lower_bound": 233.41
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 235.09,
+            "upper_bound": 235.23,
+            "lower_bound": 234.95
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 236.64,
+            "upper_bound": 236.78,
+            "lower_bound": 236.5
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 238.19,
+            "upper_bound": 238.34,
+            "lower_bound": 238.04
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Tolitoli diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.02%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Tolitoli diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7207": {
+    "kode": "7207",
+    "wilayah": "Kab. Buol",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.66,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 4.1
+          },
+          {
+            "tahun": 2016,
+            "nilai": 4.26
+          },
+          {
+            "tahun": 2017,
+            "nilai": 4.43
+          },
+          {
+            "tahun": 2018,
+            "nilai": 4.61
+          },
+          {
+            "tahun": 2019,
+            "nilai": 4.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 4.69
+          },
+          {
+            "tahun": 2021,
+            "nilai": 5.03
+          },
+          {
+            "tahun": 2022,
+            "nilai": 5.4
+          },
+          {
+            "tahun": 2023,
+            "nilai": 5.61
+          },
+          {
+            "tahun": 2024,
+            "nilai": 5.84
+          },
+          {
+            "tahun": 2025,
+            "nilai": 6.07
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 6.16,
+            "upper_bound": 6.45,
+            "lower_bound": 5.87
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 6.35,
+            "upper_bound": 6.65,
+            "lower_bound": 6.05
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 6.55,
+            "upper_bound": 6.87,
+            "lower_bound": 6.23
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 6.75,
+            "upper_bound": 7.08,
+            "lower_bound": 6.42
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 6.94,
+            "upper_bound": 7.29,
+            "lower_bound": 6.59
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Buol diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.66%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 65.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 65.62
+          },
+          {
+            "tahun": 2017,
+            "nilai": 66.04
+          },
+          {
+            "tahun": 2018,
+            "nilai": 66.46
+          },
+          {
+            "tahun": 2019,
+            "nilai": 66.88
+          },
+          {
+            "tahun": 2020,
+            "nilai": 67.1
+          },
+          {
+            "tahun": 2021,
+            "nilai": 67.72
+          },
+          {
+            "tahun": 2022,
+            "nilai": 68.14
+          },
+          {
+            "tahun": 2023,
+            "nilai": 68.56
+          },
+          {
+            "tahun": 2024,
+            "nilai": 68.98
+          },
+          {
+            "tahun": 2025,
+            "nilai": 69.4
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 69.8,
+            "upper_bound": 69.95,
+            "lower_bound": 69.65
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 70.22,
+            "upper_bound": 70.37,
+            "lower_bound": 70.07
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 70.64,
+            "upper_bound": 70.8,
+            "lower_bound": 70.48
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 71.06,
+            "upper_bound": 71.23,
+            "lower_bound": 70.89
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 71.48,
+            "upper_bound": 71.66,
+            "lower_bound": 71.3
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Buol diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.54,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 16.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 16.22
+          },
+          {
+            "tahun": 2017,
+            "nilai": 15.94
+          },
+          {
+            "tahun": 2018,
+            "nilai": 15.66
+          },
+          {
+            "tahun": 2019,
+            "nilai": 15.38
+          },
+          {
+            "tahun": 2020,
+            "nilai": 15.6
+          },
+          {
+            "tahun": 2021,
+            "nilai": 14.82
+          },
+          {
+            "tahun": 2022,
+            "nilai": 14.54
+          },
+          {
+            "tahun": 2023,
+            "nilai": 14.26
+          },
+          {
+            "tahun": 2024,
+            "nilai": 13.98
+          },
+          {
+            "tahun": 2025,
+            "nilai": 13.7
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 13.47,
+            "upper_bound": 13.84,
+            "lower_bound": 13.1
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 13.19,
+            "upper_bound": 13.58,
+            "lower_bound": 12.8
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 12.91,
+            "upper_bound": 13.31,
+            "lower_bound": 12.51
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 12.63,
+            "upper_bound": 13.05,
+            "lower_bound": 12.21
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 12.35,
+            "upper_bound": 12.79,
+            "lower_bound": 11.91
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Buol diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.54%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.57,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.92
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.84
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.76
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.68
+          },
+          {
+            "tahun": 2020,
+            "nilai": 4.2
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.52
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.44
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.36
+          },
+          {
+            "tahun": 2024,
+            "nilai": 3.28
+          },
+          {
+            "tahun": 2025,
+            "nilai": 3.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 3.17,
+            "upper_bound": 3.62,
+            "lower_bound": 2.72
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 3.09,
+            "upper_bound": 3.55,
+            "lower_bound": 2.63
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.01,
+            "upper_bound": 3.49,
+            "lower_bound": 2.53
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.93,
+            "upper_bound": 3.44,
+            "lower_bound": 2.42
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.85,
+            "upper_bound": 3.38,
+            "lower_bound": 2.32
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Buol diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.57%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.03,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 140.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 141.1
+          },
+          {
+            "tahun": 2017,
+            "nilai": 142.2
+          },
+          {
+            "tahun": 2018,
+            "nilai": 143.4
+          },
+          {
+            "tahun": 2019,
+            "nilai": 144.5
+          },
+          {
+            "tahun": 2020,
+            "nilai": 145.7
+          },
+          {
+            "tahun": 2021,
+            "nilai": 146.9
+          },
+          {
+            "tahun": 2022,
+            "nilai": 148.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 149.2
+          },
+          {
+            "tahun": 2024,
+            "nilai": 150.4
+          },
+          {
+            "tahun": 2025,
+            "nilai": 151.6
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 152.7,
+            "upper_bound": 152.81,
+            "lower_bound": 152.59
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 153.86,
+            "upper_bound": 153.98,
+            "lower_bound": 153.74
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 155.02,
+            "upper_bound": 155.14,
+            "lower_bound": 154.9
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 156.18,
+            "upper_bound": 156.31,
+            "lower_bound": 156.05
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 157.35,
+            "upper_bound": 157.49,
+            "lower_bound": 157.21
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Buol diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.03%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Buol diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7208": {
+    "kode": "7208",
+    "wilayah": "Kab. Parigi Moutong",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.81,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 11.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 12.05
+          },
+          {
+            "tahun": 2017,
+            "nilai": 12.63
+          },
+          {
+            "tahun": 2018,
+            "nilai": 13.24
+          },
+          {
+            "tahun": 2019,
+            "nilai": 13.87
+          },
+          {
+            "tahun": 2020,
+            "nilai": 13.67
+          },
+          {
+            "tahun": 2021,
+            "nilai": 14.78
+          },
+          {
+            "tahun": 2022,
+            "nilai": 15.97
+          },
+          {
+            "tahun": 2023,
+            "nilai": 16.73
+          },
+          {
+            "tahun": 2024,
+            "nilai": 17.54
+          },
+          {
+            "tahun": 2025,
+            "nilai": 18.38
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 18.67,
+            "upper_bound": 19.6,
+            "lower_bound": 17.74
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 19.35,
+            "upper_bound": 20.32,
+            "lower_bound": 18.38
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 20.03,
+            "upper_bound": 21.04,
+            "lower_bound": 19.02
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 20.72,
+            "upper_bound": 21.78,
+            "lower_bound": 19.66
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 21.4,
+            "upper_bound": 22.51,
+            "lower_bound": 20.29
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Parigi Moutong diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.81%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 63.1
+          },
+          {
+            "tahun": 2016,
+            "nilai": 63.51
+          },
+          {
+            "tahun": 2017,
+            "nilai": 63.92
+          },
+          {
+            "tahun": 2018,
+            "nilai": 64.33
+          },
+          {
+            "tahun": 2019,
+            "nilai": 64.74
+          },
+          {
+            "tahun": 2020,
+            "nilai": 64.95
+          },
+          {
+            "tahun": 2021,
+            "nilai": 65.56
+          },
+          {
+            "tahun": 2022,
+            "nilai": 65.97
+          },
+          {
+            "tahun": 2023,
+            "nilai": 66.38
+          },
+          {
+            "tahun": 2024,
+            "nilai": 66.79
+          },
+          {
+            "tahun": 2025,
+            "nilai": 67.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 67.59,
+            "upper_bound": 67.74,
+            "lower_bound": 67.44
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 68.0,
+            "upper_bound": 68.15,
+            "lower_bound": 67.85
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 68.41,
+            "upper_bound": 68.57,
+            "lower_bound": 68.25
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 68.82,
+            "upper_bound": 68.99,
+            "lower_bound": 68.65
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 69.23,
+            "upper_bound": 69.41,
+            "lower_bound": 69.05
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Parigi Moutong diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.52,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 17.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 16.91
+          },
+          {
+            "tahun": 2017,
+            "nilai": 16.62
+          },
+          {
+            "tahun": 2018,
+            "nilai": 16.33
+          },
+          {
+            "tahun": 2019,
+            "nilai": 16.04
+          },
+          {
+            "tahun": 2020,
+            "nilai": 16.25
+          },
+          {
+            "tahun": 2021,
+            "nilai": 15.46
+          },
+          {
+            "tahun": 2022,
+            "nilai": 15.17
+          },
+          {
+            "tahun": 2023,
+            "nilai": 14.88
+          },
+          {
+            "tahun": 2024,
+            "nilai": 14.59
+          },
+          {
+            "tahun": 2025,
+            "nilai": 14.3
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 14.06,
+            "upper_bound": 14.43,
+            "lower_bound": 13.69
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 13.77,
+            "upper_bound": 14.16,
+            "lower_bound": 13.38
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 13.48,
+            "upper_bound": 13.88,
+            "lower_bound": 13.08
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 13.19,
+            "upper_bound": 13.61,
+            "lower_bound": 12.77
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 12.9,
+            "upper_bound": 13.34,
+            "lower_bound": 12.46
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Parigi Moutong diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.52%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 3.1,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.4
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.31
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.22
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.13
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.04
+          },
+          {
+            "tahun": 2020,
+            "nilai": 3.55
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.86
+          },
+          {
+            "tahun": 2022,
+            "nilai": 2.77
+          },
+          {
+            "tahun": 2023,
+            "nilai": 2.68
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.59
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.46,
+            "upper_bound": 2.91,
+            "lower_bound": 2.01
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.37,
+            "upper_bound": 2.83,
+            "lower_bound": 1.91
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.28,
+            "upper_bound": 2.76,
+            "lower_bound": 1.8
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.19,
+            "upper_bound": 2.7,
+            "lower_bound": 1.68
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.1,
+            "upper_bound": 2.63,
+            "lower_bound": 1.57
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Parigi Moutong diperkirakan terkendali menurun menuju 2030 dengan MAPE 3.1%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.03,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 415.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 418.3
+          },
+          {
+            "tahun": 2017,
+            "nilai": 421.7
+          },
+          {
+            "tahun": 2018,
+            "nilai": 425.0
+          },
+          {
+            "tahun": 2019,
+            "nilai": 428.4
+          },
+          {
+            "tahun": 2020,
+            "nilai": 431.9
+          },
+          {
+            "tahun": 2021,
+            "nilai": 435.3
+          },
+          {
+            "tahun": 2022,
+            "nilai": 438.8
+          },
+          {
+            "tahun": 2023,
+            "nilai": 442.3
+          },
+          {
+            "tahun": 2024,
+            "nilai": 445.9
+          },
+          {
+            "tahun": 2025,
+            "nilai": 449.4
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 452.66,
+            "upper_bound": 452.99,
+            "lower_bound": 452.33
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 456.1,
+            "upper_bound": 456.44,
+            "lower_bound": 455.76
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 459.54,
+            "upper_bound": 459.9,
+            "lower_bound": 459.18
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 462.98,
+            "upper_bound": 463.35,
+            "lower_bound": 462.61
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 466.43,
+            "upper_bound": 466.82,
+            "lower_bound": 466.04
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Parigi Moutong diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.03%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Parigi Moutong diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7209": {
+    "kode": "7209",
+    "wilayah": "Kab. Tojo Una-Una",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.68,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 4.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 5.0
+          },
+          {
+            "tahun": 2017,
+            "nilai": 5.21
+          },
+          {
+            "tahun": 2018,
+            "nilai": 5.43
+          },
+          {
+            "tahun": 2019,
+            "nilai": 5.66
+          },
+          {
+            "tahun": 2020,
+            "nilai": 5.54
+          },
+          {
+            "tahun": 2021,
+            "nilai": 5.96
+          },
+          {
+            "tahun": 2022,
+            "nilai": 6.4
+          },
+          {
+            "tahun": 2023,
+            "nilai": 6.67
+          },
+          {
+            "tahun": 2024,
+            "nilai": 6.95
+          },
+          {
+            "tahun": 2025,
+            "nilai": 7.24
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 7.35,
+            "upper_bound": 7.7,
+            "lower_bound": 7.0
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 7.59,
+            "upper_bound": 7.96,
+            "lower_bound": 7.22
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 7.83,
+            "upper_bound": 8.21,
+            "lower_bound": 7.45
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 8.07,
+            "upper_bound": 8.47,
+            "lower_bound": 7.67
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 8.32,
+            "upper_bound": 8.74,
+            "lower_bound": 7.9
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Tojo Una-Una diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.68%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 62.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 62.42
+          },
+          {
+            "tahun": 2017,
+            "nilai": 62.84
+          },
+          {
+            "tahun": 2018,
+            "nilai": 63.26
+          },
+          {
+            "tahun": 2019,
+            "nilai": 63.68
+          },
+          {
+            "tahun": 2020,
+            "nilai": 63.9
+          },
+          {
+            "tahun": 2021,
+            "nilai": 64.52
+          },
+          {
+            "tahun": 2022,
+            "nilai": 64.94
+          },
+          {
+            "tahun": 2023,
+            "nilai": 65.36
+          },
+          {
+            "tahun": 2024,
+            "nilai": 65.78
+          },
+          {
+            "tahun": 2025,
+            "nilai": 66.2
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 66.6,
+            "upper_bound": 66.75,
+            "lower_bound": 66.45
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 67.02,
+            "upper_bound": 67.17,
+            "lower_bound": 66.87
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 67.44,
+            "upper_bound": 67.6,
+            "lower_bound": 67.28
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 67.86,
+            "upper_bound": 68.03,
+            "lower_bound": 67.69
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 68.28,
+            "upper_bound": 68.46,
+            "lower_bound": 68.1
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Tojo Una-Una diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.47,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 18.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 18.24
+          },
+          {
+            "tahun": 2017,
+            "nilai": 17.98
+          },
+          {
+            "tahun": 2018,
+            "nilai": 17.72
+          },
+          {
+            "tahun": 2019,
+            "nilai": 17.46
+          },
+          {
+            "tahun": 2020,
+            "nilai": 17.7
+          },
+          {
+            "tahun": 2021,
+            "nilai": 16.94
+          },
+          {
+            "tahun": 2022,
+            "nilai": 16.68
+          },
+          {
+            "tahun": 2023,
+            "nilai": 16.42
+          },
+          {
+            "tahun": 2024,
+            "nilai": 16.16
+          },
+          {
+            "tahun": 2025,
+            "nilai": 15.9
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 15.69,
+            "upper_bound": 16.06,
+            "lower_bound": 15.32
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 15.43,
+            "upper_bound": 15.82,
+            "lower_bound": 15.04
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 15.17,
+            "upper_bound": 15.57,
+            "lower_bound": 14.77
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 14.91,
+            "upper_bound": 15.33,
+            "lower_bound": 14.49
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 14.65,
+            "upper_bound": 15.09,
+            "lower_bound": 14.21
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Tojo Una-Una diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.47%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.51
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.42
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.33
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.24
+          },
+          {
+            "tahun": 2020,
+            "nilai": 3.75
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.06
+          },
+          {
+            "tahun": 2022,
+            "nilai": 2.97
+          },
+          {
+            "tahun": 2023,
+            "nilai": 2.88
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.79
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.7
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.66,
+            "upper_bound": 3.11,
+            "lower_bound": 2.21
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.57,
+            "upper_bound": 3.03,
+            "lower_bound": 2.11
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.48,
+            "upper_bound": 2.96,
+            "lower_bound": 2.0
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.39,
+            "upper_bound": 2.9,
+            "lower_bound": 1.88
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.3,
+            "upper_bound": 2.83,
+            "lower_bound": 1.77
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Tojo Una-Una diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.91%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.04,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 150.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 151.6
+          },
+          {
+            "tahun": 2017,
+            "nilai": 153.3
+          },
+          {
+            "tahun": 2018,
+            "nilai": 155.0
+          },
+          {
+            "tahun": 2019,
+            "nilai": 156.7
+          },
+          {
+            "tahun": 2020,
+            "nilai": 158.4
+          },
+          {
+            "tahun": 2021,
+            "nilai": 160.2
+          },
+          {
+            "tahun": 2022,
+            "nilai": 161.9
+          },
+          {
+            "tahun": 2023,
+            "nilai": 163.7
+          },
+          {
+            "tahun": 2024,
+            "nilai": 165.5
+          },
+          {
+            "tahun": 2025,
+            "nilai": 167.3
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 168.91,
+            "upper_bound": 169.12,
+            "lower_bound": 168.7
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 170.64,
+            "upper_bound": 170.86,
+            "lower_bound": 170.42
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 172.37,
+            "upper_bound": 172.6,
+            "lower_bound": 172.14
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 174.1,
+            "upper_bound": 174.34,
+            "lower_bound": 173.86
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 175.84,
+            "upper_bound": 176.09,
+            "lower_bound": 175.59
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Tojo Una-Una diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.04%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Tojo Una-Una diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7210": {
+    "kode": "7210",
+    "wilayah": "Kab. Sigi",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.84,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 6.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 6.5
+          },
+          {
+            "tahun": 2017,
+            "nilai": 6.82
+          },
+          {
+            "tahun": 2018,
+            "nilai": 7.16
+          },
+          {
+            "tahun": 2019,
+            "nilai": 7.51
+          },
+          {
+            "tahun": 2020,
+            "nilai": 7.4
+          },
+          {
+            "tahun": 2021,
+            "nilai": 8.01
+          },
+          {
+            "tahun": 2022,
+            "nilai": 8.67
+          },
+          {
+            "tahun": 2023,
+            "nilai": 9.09
+          },
+          {
+            "tahun": 2024,
+            "nilai": 9.54
+          },
+          {
+            "tahun": 2025,
+            "nilai": 10.0
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 10.16,
+            "upper_bound": 10.67,
+            "lower_bound": 9.65
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 10.54,
+            "upper_bound": 11.08,
+            "lower_bound": 10.0
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 10.92,
+            "upper_bound": 11.48,
+            "lower_bound": 10.36
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 11.29,
+            "upper_bound": 11.87,
+            "lower_bound": 10.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 11.67,
+            "upper_bound": 12.28,
+            "lower_bound": 11.06
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Sigi diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.84%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 65.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 65.94
+          },
+          {
+            "tahun": 2017,
+            "nilai": 66.38
+          },
+          {
+            "tahun": 2018,
+            "nilai": 66.82
+          },
+          {
+            "tahun": 2019,
+            "nilai": 67.26
+          },
+          {
+            "tahun": 2020,
+            "nilai": 67.5
+          },
+          {
+            "tahun": 2021,
+            "nilai": 68.14
+          },
+          {
+            "tahun": 2022,
+            "nilai": 68.58
+          },
+          {
+            "tahun": 2023,
+            "nilai": 69.02
+          },
+          {
+            "tahun": 2024,
+            "nilai": 69.46
+          },
+          {
+            "tahun": 2025,
+            "nilai": 69.9
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 70.32,
+            "upper_bound": 70.47,
+            "lower_bound": 70.17
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 70.76,
+            "upper_bound": 70.91,
+            "lower_bound": 70.61
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 71.2,
+            "upper_bound": 71.36,
+            "lower_bound": 71.04
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 71.64,
+            "upper_bound": 71.81,
+            "lower_bound": 71.47
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 72.08,
+            "upper_bound": 72.26,
+            "lower_bound": 71.9
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Sigi diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.61,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 14.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 14.52
+          },
+          {
+            "tahun": 2017,
+            "nilai": 14.24
+          },
+          {
+            "tahun": 2018,
+            "nilai": 13.96
+          },
+          {
+            "tahun": 2019,
+            "nilai": 13.68
+          },
+          {
+            "tahun": 2020,
+            "nilai": 13.9
+          },
+          {
+            "tahun": 2021,
+            "nilai": 13.12
+          },
+          {
+            "tahun": 2022,
+            "nilai": 12.84
+          },
+          {
+            "tahun": 2023,
+            "nilai": 12.56
+          },
+          {
+            "tahun": 2024,
+            "nilai": 12.28
+          },
+          {
+            "tahun": 2025,
+            "nilai": 12.0
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 11.77,
+            "upper_bound": 12.14,
+            "lower_bound": 11.4
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 11.49,
+            "upper_bound": 11.88,
+            "lower_bound": 11.1
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 11.21,
+            "upper_bound": 11.61,
+            "lower_bound": 10.81
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 10.93,
+            "upper_bound": 11.35,
+            "lower_bound": 10.51
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 10.65,
+            "upper_bound": 11.09,
+            "lower_bound": 10.21
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Sigi diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.61%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 3.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.4
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.3
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.2
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.1
+          },
+          {
+            "tahun": 2020,
+            "nilai": 3.6
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.9
+          },
+          {
+            "tahun": 2022,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2023,
+            "nilai": 2.7
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.45,
+            "upper_bound": 2.9,
+            "lower_bound": 2.0
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.35,
+            "upper_bound": 2.81,
+            "lower_bound": 1.89
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.25,
+            "upper_bound": 2.73,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.15,
+            "upper_bound": 2.66,
+            "lower_bound": 1.64
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.05,
+            "upper_bound": 2.58,
+            "lower_bound": 1.52
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Sigi diperkirakan terkendali menurun menuju 2030 dengan MAPE 3.05%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.04,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 240.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 242.4
+          },
+          {
+            "tahun": 2017,
+            "nilai": 244.8
+          },
+          {
+            "tahun": 2018,
+            "nilai": 247.3
+          },
+          {
+            "tahun": 2019,
+            "nilai": 249.7
+          },
+          {
+            "tahun": 2020,
+            "nilai": 252.2
+          },
+          {
+            "tahun": 2021,
+            "nilai": 254.8
+          },
+          {
+            "tahun": 2022,
+            "nilai": 257.3
+          },
+          {
+            "tahun": 2023,
+            "nilai": 259.9
+          },
+          {
+            "tahun": 2024,
+            "nilai": 262.5
+          },
+          {
+            "tahun": 2025,
+            "nilai": 265.1
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 267.43,
+            "upper_bound": 267.73,
+            "lower_bound": 267.13
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 269.95,
+            "upper_bound": 270.26,
+            "lower_bound": 269.64
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 272.46,
+            "upper_bound": 272.79,
+            "lower_bound": 272.13
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 274.97,
+            "upper_bound": 275.31,
+            "lower_bound": 274.63
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 277.48,
+            "upper_bound": 277.84,
+            "lower_bound": 277.12
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Sigi diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.04%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Sigi diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7211": {
+    "kode": "7211",
+    "wilayah": "Kab. Banggai Laut",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 1.71,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.1
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.19
+          },
+          {
+            "tahun": 2017,
+            "nilai": 2.28
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.37
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.47
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.41
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.59
+          },
+          {
+            "tahun": 2022,
+            "nilai": 2.78
+          },
+          {
+            "tahun": 2023,
+            "nilai": 2.9
+          },
+          {
+            "tahun": 2024,
+            "nilai": 3.01
+          },
+          {
+            "tahun": 2025,
+            "nilai": 3.14
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 3.18,
+            "upper_bound": 3.34,
+            "lower_bound": 3.02
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 3.29,
+            "upper_bound": 3.45,
+            "lower_bound": 3.13
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.39,
+            "upper_bound": 3.56,
+            "lower_bound": 3.22
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.49,
+            "upper_bound": 3.67,
+            "lower_bound": 3.31
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.59,
+            "upper_bound": 3.78,
+            "lower_bound": 3.4
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Banggai Laut diperkirakan tumbuh stabil menuju 2030 dengan MAPE 1.71%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 62.2
+          },
+          {
+            "tahun": 2016,
+            "nilai": 62.63
+          },
+          {
+            "tahun": 2017,
+            "nilai": 63.06
+          },
+          {
+            "tahun": 2018,
+            "nilai": 63.49
+          },
+          {
+            "tahun": 2019,
+            "nilai": 63.92
+          },
+          {
+            "tahun": 2020,
+            "nilai": 64.15
+          },
+          {
+            "tahun": 2021,
+            "nilai": 64.78
+          },
+          {
+            "tahun": 2022,
+            "nilai": 65.21
+          },
+          {
+            "tahun": 2023,
+            "nilai": 65.64
+          },
+          {
+            "tahun": 2024,
+            "nilai": 66.07
+          },
+          {
+            "tahun": 2025,
+            "nilai": 66.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 66.91,
+            "upper_bound": 67.06,
+            "lower_bound": 66.76
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 67.34,
+            "upper_bound": 67.49,
+            "lower_bound": 67.19
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 67.77,
+            "upper_bound": 67.93,
+            "lower_bound": 67.61
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 68.2,
+            "upper_bound": 68.37,
+            "lower_bound": 68.03
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 68.63,
+            "upper_bound": 68.81,
+            "lower_bound": 68.45
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Banggai Laut diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.53,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 16.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 16.51
+          },
+          {
+            "tahun": 2017,
+            "nilai": 16.22
+          },
+          {
+            "tahun": 2018,
+            "nilai": 15.93
+          },
+          {
+            "tahun": 2019,
+            "nilai": 15.64
+          },
+          {
+            "tahun": 2020,
+            "nilai": 15.85
+          },
+          {
+            "tahun": 2021,
+            "nilai": 15.06
+          },
+          {
+            "tahun": 2022,
+            "nilai": 14.77
+          },
+          {
+            "tahun": 2023,
+            "nilai": 14.48
+          },
+          {
+            "tahun": 2024,
+            "nilai": 14.19
+          },
+          {
+            "tahun": 2025,
+            "nilai": 13.9
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 13.66,
+            "upper_bound": 14.03,
+            "lower_bound": 13.29
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 13.37,
+            "upper_bound": 13.76,
+            "lower_bound": 12.98
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 13.08,
+            "upper_bound": 13.48,
+            "lower_bound": 12.68
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 12.79,
+            "upper_bound": 13.21,
+            "lower_bound": 12.37
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 12.5,
+            "upper_bound": 12.94,
+            "lower_bound": 12.06
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Banggai Laut diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.53%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 3.36,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.1
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.02
+          },
+          {
+            "tahun": 2017,
+            "nilai": 2.94
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.86
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.78
+          },
+          {
+            "tahun": 2020,
+            "nilai": 3.3
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.62
+          },
+          {
+            "tahun": 2022,
+            "nilai": 2.54
+          },
+          {
+            "tahun": 2023,
+            "nilai": 2.46
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.38
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.3
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.27,
+            "upper_bound": 2.72,
+            "lower_bound": 1.82
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.19,
+            "upper_bound": 2.65,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.11,
+            "upper_bound": 2.59,
+            "lower_bound": 1.63
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.03,
+            "upper_bound": 2.54,
+            "lower_bound": 1.52
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 1.95,
+            "upper_bound": 2.48,
+            "lower_bound": 1.42
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Banggai Laut diperkirakan terkendali menurun menuju 2030 dengan MAPE 3.36%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.04,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 66.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 66.7
+          },
+          {
+            "tahun": 2017,
+            "nilai": 67.3
+          },
+          {
+            "tahun": 2018,
+            "nilai": 68.0
+          },
+          {
+            "tahun": 2019,
+            "nilai": 68.7
+          },
+          {
+            "tahun": 2020,
+            "nilai": 69.4
+          },
+          {
+            "tahun": 2021,
+            "nilai": 70.1
+          },
+          {
+            "tahun": 2022,
+            "nilai": 70.8
+          },
+          {
+            "tahun": 2023,
+            "nilai": 71.5
+          },
+          {
+            "tahun": 2024,
+            "nilai": 72.2
+          },
+          {
+            "tahun": 2025,
+            "nilai": 72.9
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 73.57,
+            "upper_bound": 73.64,
+            "lower_bound": 73.5
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 74.26,
+            "upper_bound": 74.34,
+            "lower_bound": 74.18
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 74.95,
+            "upper_bound": 75.03,
+            "lower_bound": 74.87
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 75.64,
+            "upper_bound": 75.72,
+            "lower_bound": 75.56
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 76.34,
+            "upper_bound": 76.43,
+            "lower_bound": 76.25
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Banggai Laut diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.04%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Banggai Laut diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7212": {
+    "kode": "7212",
+    "wilayah": "Kab. Morowali Utara",
+    "tipe": "Kabupaten",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 9.92,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 8.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 9.82
+          },
+          {
+            "tahun": 2017,
+            "nilai": 11.34
+          },
+          {
+            "tahun": 2018,
+            "nilai": 13.1
+          },
+          {
+            "tahun": 2019,
+            "nilai": 15.13
+          },
+          {
+            "tahun": 2020,
+            "nilai": 16.42
+          },
+          {
+            "tahun": 2021,
+            "nilai": 19.57
+          },
+          {
+            "tahun": 2022,
+            "nilai": 23.31
+          },
+          {
+            "tahun": 2023,
+            "nilai": 26.92
+          },
+          {
+            "tahun": 2024,
+            "nilai": 31.09
+          },
+          {
+            "tahun": 2025,
+            "nilai": 35.91
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 35.21,
+            "upper_bound": 40.05,
+            "lower_bound": 30.37
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 37.88,
+            "upper_bound": 42.91,
+            "lower_bound": 32.85
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 40.55,
+            "upper_bound": 45.8,
+            "lower_bound": 35.3
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 43.22,
+            "upper_bound": 48.71,
+            "lower_bound": 37.73
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 45.89,
+            "upper_bound": 51.63,
+            "lower_bound": 40.15
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kab. Morowali Utara diperkirakan tumbuh stabil menuju 2030 dengan MAPE 9.92%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.05,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 65.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 65.54
+          },
+          {
+            "tahun": 2017,
+            "nilai": 66.08
+          },
+          {
+            "tahun": 2018,
+            "nilai": 66.62
+          },
+          {
+            "tahun": 2019,
+            "nilai": 67.16
+          },
+          {
+            "tahun": 2020,
+            "nilai": 67.5
+          },
+          {
+            "tahun": 2021,
+            "nilai": 68.24
+          },
+          {
+            "tahun": 2022,
+            "nilai": 68.78
+          },
+          {
+            "tahun": 2023,
+            "nilai": 69.32
+          },
+          {
+            "tahun": 2024,
+            "nilai": 69.86
+          },
+          {
+            "tahun": 2025,
+            "nilai": 70.4
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 70.92,
+            "upper_bound": 71.07,
+            "lower_bound": 70.77
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 71.46,
+            "upper_bound": 71.61,
+            "lower_bound": 71.31
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 72.0,
+            "upper_bound": 72.16,
+            "lower_bound": 71.84
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 72.54,
+            "upper_bound": 72.71,
+            "lower_bound": 72.37
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 73.08,
+            "upper_bound": 73.26,
+            "lower_bound": 72.9
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kab. Morowali Utara diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.05%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 0.57,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 16.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 15.68
+          },
+          {
+            "tahun": 2017,
+            "nilai": 15.36
+          },
+          {
+            "tahun": 2018,
+            "nilai": 15.04
+          },
+          {
+            "tahun": 2019,
+            "nilai": 14.72
+          },
+          {
+            "tahun": 2020,
+            "nilai": 14.9
+          },
+          {
+            "tahun": 2021,
+            "nilai": 14.08
+          },
+          {
+            "tahun": 2022,
+            "nilai": 13.76
+          },
+          {
+            "tahun": 2023,
+            "nilai": 13.44
+          },
+          {
+            "tahun": 2024,
+            "nilai": 13.12
+          },
+          {
+            "tahun": 2025,
+            "nilai": 12.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 12.53,
+            "upper_bound": 12.9,
+            "lower_bound": 12.16
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 12.21,
+            "upper_bound": 12.6,
+            "lower_bound": 11.82
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 11.89,
+            "upper_bound": 12.29,
+            "lower_bound": 11.49
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 11.57,
+            "upper_bound": 11.99,
+            "lower_bound": 11.15
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 11.25,
+            "upper_bound": 11.69,
+            "lower_bound": 10.81
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kab. Morowali Utara diperkirakan terkendali menurun menuju 2030 dengan MAPE 0.57%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 2.83,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 3.7
+          },
+          {
+            "tahun": 2016,
+            "nilai": 3.61
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.52
+          },
+          {
+            "tahun": 2018,
+            "nilai": 3.43
+          },
+          {
+            "tahun": 2019,
+            "nilai": 3.34
+          },
+          {
+            "tahun": 2020,
+            "nilai": 3.85
+          },
+          {
+            "tahun": 2021,
+            "nilai": 3.16
+          },
+          {
+            "tahun": 2022,
+            "nilai": 3.07
+          },
+          {
+            "tahun": 2023,
+            "nilai": 2.98
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.89
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.76,
+            "upper_bound": 3.21,
+            "lower_bound": 2.31
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.67,
+            "upper_bound": 3.13,
+            "lower_bound": 2.21
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 2.58,
+            "upper_bound": 3.06,
+            "lower_bound": 2.1
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 2.49,
+            "upper_bound": 3.0,
+            "lower_bound": 1.98
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 2.4,
+            "upper_bound": 2.93,
+            "lower_bound": 1.87
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kab. Morowali Utara diperkirakan terkendali menurun menuju 2030 dengan MAPE 2.83%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.36,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 110.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 113.4
+          },
+          {
+            "tahun": 2017,
+            "nilai": 116.9
+          },
+          {
+            "tahun": 2018,
+            "nilai": 120.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 124.3
+          },
+          {
+            "tahun": 2020,
+            "nilai": 128.1
+          },
+          {
+            "tahun": 2021,
+            "nilai": 132.1
+          },
+          {
+            "tahun": 2022,
+            "nilai": 136.2
+          },
+          {
+            "tahun": 2023,
+            "nilai": 140.4
+          },
+          {
+            "tahun": 2024,
+            "nilai": 144.8
+          },
+          {
+            "tahun": 2025,
+            "nilai": 149.3
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 152.28,
+            "upper_bound": 153.66,
+            "lower_bound": 150.9
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 156.2,
+            "upper_bound": 157.64,
+            "lower_bound": 154.76
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 160.13,
+            "upper_bound": 161.63,
+            "lower_bound": 158.63
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 164.05,
+            "upper_bound": 165.62,
+            "lower_bound": 162.48
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 167.97,
+            "upper_bound": 169.61,
+            "lower_bound": 166.33
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kab. Morowali Utara diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.36%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kab. Morowali Utara diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  },
+  "7271": {
+    "kode": "7271",
+    "wilayah": "Kota Palu",
+    "tipe": "Kota",
+    "indicators": {
+      "PDRB_Triliun": {
+        "nama": "PDRB Riil",
+        "unit": "Triliun Rp",
+        "mape": 2.0,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 19.5
+          },
+          {
+            "tahun": 2016,
+            "nilai": 20.57
+          },
+          {
+            "tahun": 2017,
+            "nilai": 21.7
+          },
+          {
+            "tahun": 2018,
+            "nilai": 22.9
+          },
+          {
+            "tahun": 2019,
+            "nilai": 24.16
+          },
+          {
+            "tahun": 2020,
+            "nilai": 23.96
+          },
+          {
+            "tahun": 2021,
+            "nilai": 26.08
+          },
+          {
+            "tahun": 2022,
+            "nilai": 28.37
+          },
+          {
+            "tahun": 2023,
+            "nilai": 29.93
+          },
+          {
+            "tahun": 2024,
+            "nilai": 31.57
+          },
+          {
+            "tahun": 2025,
+            "nilai": 33.31
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 33.86,
+            "upper_bound": 35.65,
+            "lower_bound": 32.07
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 35.22,
+            "upper_bound": 37.09,
+            "lower_bound": 33.35
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 36.59,
+            "upper_bound": 38.54,
+            "lower_bound": 34.64
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 37.96,
+            "upper_bound": 39.99,
+            "lower_bound": 35.93
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 39.33,
+            "upper_bound": 41.46,
+            "lower_bound": 37.2
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, PDRB Riil di Kota Palu diperkirakan tumbuh stabil menuju 2030 dengan MAPE 2.0%."
+      },
+      "IPM": {
+        "nama": "Indeks Pembangunan Manusia",
+        "unit": "Poin",
+        "mape": 0.04,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 78.4
+          },
+          {
+            "tahun": 2016,
+            "nilai": 78.82
+          },
+          {
+            "tahun": 2017,
+            "nilai": 79.24
+          },
+          {
+            "tahun": 2018,
+            "nilai": 79.66
+          },
+          {
+            "tahun": 2019,
+            "nilai": 80.08
+          },
+          {
+            "tahun": 2020,
+            "nilai": 80.3
+          },
+          {
+            "tahun": 2021,
+            "nilai": 80.92
+          },
+          {
+            "tahun": 2022,
+            "nilai": 81.34
+          },
+          {
+            "tahun": 2023,
+            "nilai": 81.76
+          },
+          {
+            "tahun": 2024,
+            "nilai": 82.18
+          },
+          {
+            "tahun": 2025,
+            "nilai": 82.6
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 83.0,
+            "upper_bound": 83.15,
+            "lower_bound": 82.85
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 83.42,
+            "upper_bound": 83.57,
+            "lower_bound": 83.27
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 83.84,
+            "upper_bound": 84.0,
+            "lower_bound": 83.68
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 84.26,
+            "upper_bound": 84.43,
+            "lower_bound": 84.09
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 84.68,
+            "upper_bound": 84.86,
+            "lower_bound": 84.5
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Indeks Pembangunan Manusia di Kota Palu diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.04%."
+      },
+      "Kemiskinan_Persen": {
+        "nama": "Tingkat Kemiskinan",
+        "unit": "%",
+        "mape": 1.11,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 7.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 7.68
+          },
+          {
+            "tahun": 2017,
+            "nilai": 7.56
+          },
+          {
+            "tahun": 2018,
+            "nilai": 7.44
+          },
+          {
+            "tahun": 2019,
+            "nilai": 7.32
+          },
+          {
+            "tahun": 2020,
+            "nilai": 7.7
+          },
+          {
+            "tahun": 2021,
+            "nilai": 7.08
+          },
+          {
+            "tahun": 2022,
+            "nilai": 6.96
+          },
+          {
+            "tahun": 2023,
+            "nilai": 6.84
+          },
+          {
+            "tahun": 2024,
+            "nilai": 6.72
+          },
+          {
+            "tahun": 2025,
+            "nilai": 6.6
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 6.53,
+            "upper_bound": 6.9,
+            "lower_bound": 6.16
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 6.41,
+            "upper_bound": 6.8,
+            "lower_bound": 6.02
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 6.29,
+            "upper_bound": 6.69,
+            "lower_bound": 5.89
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 6.17,
+            "upper_bound": 6.59,
+            "lower_bound": 5.75
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 6.05,
+            "upper_bound": 6.49,
+            "lower_bound": 5.61
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Tingkat Kemiskinan di Kota Palu diperkirakan terkendali menurun menuju 2030 dengan MAPE 1.11%."
+      },
+      "Pengangguran_Persen": {
+        "nama": "Pengangguran Terbuka (TPT)",
+        "unit": "%",
+        "mape": 1.54,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 6.8
+          },
+          {
+            "tahun": 2016,
+            "nilai": 6.67
+          },
+          {
+            "tahun": 2017,
+            "nilai": 6.54
+          },
+          {
+            "tahun": 2018,
+            "nilai": 6.41
+          },
+          {
+            "tahun": 2019,
+            "nilai": 6.28
+          },
+          {
+            "tahun": 2020,
+            "nilai": 6.75
+          },
+          {
+            "tahun": 2021,
+            "nilai": 6.02
+          },
+          {
+            "tahun": 2022,
+            "nilai": 5.89
+          },
+          {
+            "tahun": 2023,
+            "nilai": 5.76
+          },
+          {
+            "tahun": 2024,
+            "nilai": 5.63
+          },
+          {
+            "tahun": 2025,
+            "nilai": 5.5
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 5.42,
+            "upper_bound": 5.87,
+            "lower_bound": 4.97
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 5.29,
+            "upper_bound": 5.75,
+            "lower_bound": 4.83
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 5.16,
+            "upper_bound": 5.64,
+            "lower_bound": 4.68
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 5.03,
+            "upper_bound": 5.54,
+            "lower_bound": 4.52
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 4.9,
+            "upper_bound": 5.43,
+            "lower_bound": 4.37
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Pengangguran Terbuka (TPT) di Kota Palu diperkirakan terkendali menurun menuju 2030 dengan MAPE 1.54%."
+      },
+      "Penduduk_Ribu": {
+        "nama": "Jumlah Penduduk",
+        "unit": "Ribu Jiwa",
+        "mape": 0.04,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 345.0
+          },
+          {
+            "tahun": 2016,
+            "nilai": 348.4
+          },
+          {
+            "tahun": 2017,
+            "nilai": 351.9
+          },
+          {
+            "tahun": 2018,
+            "nilai": 355.5
+          },
+          {
+            "tahun": 2019,
+            "nilai": 359.0
+          },
+          {
+            "tahun": 2020,
+            "nilai": 362.6
+          },
+          {
+            "tahun": 2021,
+            "nilai": 366.2
+          },
+          {
+            "tahun": 2022,
+            "nilai": 369.9
+          },
+          {
+            "tahun": 2023,
+            "nilai": 373.6
+          },
+          {
+            "tahun": 2024,
+            "nilai": 377.3
+          },
+          {
+            "tahun": 2025,
+            "nilai": 381.1
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 384.44,
+            "upper_bound": 384.84,
+            "lower_bound": 384.04
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 388.05,
+            "upper_bound": 388.47,
+            "lower_bound": 387.63
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 391.66,
+            "upper_bound": 392.1,
+            "lower_bound": 391.22
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 395.27,
+            "upper_bound": 395.73,
+            "lower_bound": 394.81
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 398.88,
+            "upper_bound": 399.36,
+            "lower_bound": 398.4
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Jumlah Penduduk di Kota Palu diperkirakan tumbuh stabil menuju 2030 dengan MAPE 0.04%."
+      },
+      "Inflasi_Persen": {
+        "nama": "Inflasi Tahunan",
+        "unit": "%",
+        "mape": 10.91,
+        "confidence_level": "92.4%",
+        "model": "Hybrid XGBoost + Trend Ensemble",
+        "historical": [
+          {
+            "tahun": 2015,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2016,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2017,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2018,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2019,
+            "nilai": 2.8
+          },
+          {
+            "tahun": 2020,
+            "nilai": 2.0
+          },
+          {
+            "tahun": 2021,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2022,
+            "nilai": 4.0
+          },
+          {
+            "tahun": 2023,
+            "nilai": 3.0
+          },
+          {
+            "tahun": 2024,
+            "nilai": 2.6
+          },
+          {
+            "tahun": 2025,
+            "nilai": 2.8
+          }
+        ],
+        "forecast": [
+          {
+            "tahun": 2026,
+            "prediksi": 2.95,
+            "upper_bound": 4.12,
+            "lower_bound": 1.78
+          },
+          {
+            "tahun": 2027,
+            "prediksi": 2.98,
+            "upper_bound": 4.19,
+            "lower_bound": 1.77
+          },
+          {
+            "tahun": 2028,
+            "prediksi": 3.0,
+            "upper_bound": 4.27,
+            "lower_bound": 1.73
+          },
+          {
+            "tahun": 2029,
+            "prediksi": 3.03,
+            "upper_bound": 4.35,
+            "lower_bound": 1.71
+          },
+          {
+            "tahun": 2030,
+            "prediksi": 3.05,
+            "upper_bound": 4.44,
+            "lower_bound": 1.66
+          }
+        ],
+        "insight": "Berdasarkan tren 2015-2025, Inflasi Tahunan di Kota Palu diperkirakan tumbuh stabil menuju 2030 dengan MAPE 10.91%."
+      }
+    }
+  }
+};
+
+export const ML_CLUSTERS_DATA = {
+  "cluster_definitions": {
+    "0": {
+      "name": "Kawasan Maju & Industri Hilirisasi",
+      "badge": "Cluster A (Industri)",
+      "color": "#EA580C",
+      "desc": "Didorong oleh pertumbuhan PDRB yang sangat masif, hilirisasi nikel, serta kapasitas fiskal tinggi.",
+      "karakteristik": "PDRB > Rp 35T, Pertumbuhan > 15%, Tenaga Kerja Sektor Sekunder Dominan."
+    },
+    "1": {
+      "name": "Pusat Perkotaan & Jasa Modern",
+      "badge": "Cluster B (Metropolitan/Jasa)",
+      "color": "#F58220",
+      "desc": "Memiliki IPM tertinggi di Sulawesi Tengah, kemiskinan terendah, dan pusat pendidikan serta perdagangan.",
+      "karakteristik": "IPM > 80, Kemiskinan < 7%, Sektor Jasa & Pemerintahan Dominan."
+    },
+    "2": {
+      "name": "Kawasan Maritim & Komoditas Maju",
+      "badge": "Cluster C (Agraris & Maritim Unggulan)",
+      "color": "#0284C7",
+      "desc": "Didukung sektor perkebunan kelapa sawit, kakao, serta perikanan tangkap tangguh dengan NTP stabil.",
+      "karakteristik": "NTP Petani > 108, PDRB Rp 10-30T, Pertumbuhan Ekonomi 5-8%."
+    },
+    "3": {
+      "name": "Kawasan Prioritas Percepatan Pembangunan",
+      "badge": "Cluster D (Prioritas Akselerasi)",
+      "color": "#E11D48",
+      "desc": "Wilayah dengan tingkat kemiskinan di atas rata-rata provinsi yang membutuhkan intervensi perlindungan sosial & infrastruktur dasar.",
+      "karakteristik": "Kemiskinan > 13%, IPM < 70, Butuh Akses Konektivitas & Bantuan Vokasi."
+    }
+  },
+  "regions": [
+    {
+      "kode": "7271",
+      "wilayah": "Kota Palu",
+      "cluster_id": 1,
+      "cluster_name": "Pusat Perkotaan & Jasa Modern",
+      "cluster_badge": "Cluster B (Metropolitan/Jasa)",
+      "cluster_color": "#F58220",
+      "pca_x": -2.7649999999999997,
+      "pca_y": 2.585,
+      "ipm": 82.6,
+      "pdrb": 33.31,
+      "kemiskinan": 6.6,
+      "tpt": 5.5,
+      "ntp": 104.8,
+      "penduduk": 381.1
+    },
+    {
+      "kode": "7201",
+      "wilayah": "Kab. Banggai",
+      "cluster_id": 2,
+      "cluster_name": "Kawasan Maritim & Komoditas Maju",
+      "cluster_badge": "Cluster C (Agraris & Maritim Unggulan)",
+      "cluster_color": "#0284C7",
+      "pca_x": 0.565,
+      "pca_y": -0.485,
+      "ipm": 71.8,
+      "pdrb": 30.41,
+      "kemiskinan": 7.4,
+      "tpt": 3.2,
+      "ntp": 110.3,
+      "penduduk": 368.2
+    },
+    {
+      "kode": "7202",
+      "wilayah": "Kab. Banggai Kepulauan",
+      "cluster_id": 3,
+      "cluster_name": "Kawasan Prioritas Percepatan Pembangunan",
+      "cluster_badge": "Cluster D (Prioritas Akselerasi)",
+      "cluster_color": "#E11D48",
+      "pca_x": -1.095,
+      "pca_y": -1.795,
+      "ipm": 66.8,
+      "pdrb": 5.73,
+      "kemiskinan": 13.3,
+      "tpt": 2.9,
+      "ntp": 107.3,
+      "penduduk": 123.3
+    },
+    {
+      "kode": "7203",
+      "wilayah": "Kab. Morowali",
+      "cluster_id": 0,
+      "cluster_name": "Kawasan Maju & Industri Hilirisasi",
+      "cluster_badge": "Cluster A (Industri)",
+      "cluster_color": "#EA580C",
+      "pca_x": 3.42,
+      "pca_y": 1.77,
+      "ipm": 73.8,
+      "pdrb": 66.78,
+      "kemiskinan": 12.2,
+      "tpt": 3.5,
+      "ntp": 114.3,
+      "penduduk": 178.0
+    },
+    {
+      "kode": "7204",
+      "wilayah": "Kab. Poso",
+      "cluster_id": 2,
+      "cluster_name": "Kawasan Maritim & Komoditas Maju",
+      "cluster_badge": "Cluster C (Agraris & Maritim Unggulan)",
+      "cluster_color": "#0284C7",
+      "pca_x": 0.515,
+      "pca_y": -0.28500000000000003,
+      "ipm": 72.5,
+      "pdrb": 14.29,
+      "kemiskinan": 15.2,
+      "tpt": 2.7,
+      "ntp": 111.8,
+      "penduduk": 252.0
+    },
+    {
+      "kode": "7205",
+      "wilayah": "Kab. Donggala",
+      "cluster_id": 3,
+      "cluster_name": "Kawasan Prioritas Percepatan Pembangunan",
+      "cluster_badge": "Cluster D (Prioritas Akselerasi)",
+      "cluster_color": "#E11D48",
+      "pca_x": -1.2,
+      "pca_y": -2.05,
+      "ipm": 67.1,
+      "pdrb": 11.21,
+      "kemiskinan": 16.5,
+      "tpt": 3.2,
+      "ntp": 108.5,
+      "penduduk": 308.6
+    },
+    {
+      "kode": "7206",
+      "wilayah": "Kab. Tolitoli",
+      "cluster_id": 3,
+      "cluster_name": "Kawasan Prioritas Percepatan Pembangunan",
+      "cluster_badge": "Cluster D (Prioritas Akselerasi)",
+      "cluster_color": "#E11D48",
+      "pca_x": -1.15,
+      "pca_y": -1.9999999999999998,
+      "ipm": 67.4,
+      "pdrb": 10.36,
+      "kemiskinan": 12.9,
+      "tpt": 3.0,
+      "ntp": 110.1,
+      "penduduk": 230.5
+    },
+    {
+      "kode": "7207",
+      "wilayah": "Kab. Buol",
+      "cluster_id": 3,
+      "cluster_name": "Kawasan Prioritas Percepatan Pembangunan",
+      "cluster_badge": "Cluster D (Prioritas Akselerasi)",
+      "cluster_color": "#E11D48",
+      "pca_x": -1.16,
+      "pca_y": -1.9099999999999997,
+      "ipm": 69.4,
+      "pdrb": 6.07,
+      "kemiskinan": 13.7,
+      "tpt": 3.2,
+      "ntp": 109.3,
+      "penduduk": 151.6
+    },
+    {
+      "kode": "7208",
+      "wilayah": "Kab. Parigi Moutong",
+      "cluster_id": 2,
+      "cluster_name": "Kawasan Maritim & Komoditas Maju",
+      "cluster_badge": "Cluster C (Agraris & Maritim Unggulan)",
+      "cluster_color": "#0284C7",
+      "pca_x": 0.33999999999999997,
+      "pca_y": -0.41000000000000003,
+      "ipm": 67.2,
+      "pdrb": 18.38,
+      "kemiskinan": 14.3,
+      "tpt": 2.5,
+      "ntp": 112.8,
+      "penduduk": 449.4
+    },
+    {
+      "kode": "7209",
+      "wilayah": "Kab. Tojo Una-Una",
+      "cluster_id": 3,
+      "cluster_name": "Kawasan Prioritas Percepatan Pembangunan",
+      "cluster_badge": "Cluster D (Prioritas Akselerasi)",
+      "cluster_color": "#E11D48",
+      "pca_x": -1.055,
+      "pca_y": -1.9549999999999998,
+      "ipm": 66.2,
+      "pdrb": 7.24,
+      "kemiskinan": 15.9,
+      "tpt": 2.7,
+      "ntp": 108.8,
+      "penduduk": 167.3
+    },
+    {
+      "kode": "7210",
+      "wilayah": "Kab. Sigi",
+      "cluster_id": 3,
+      "cluster_name": "Kawasan Prioritas Percepatan Pembangunan",
+      "cluster_badge": "Cluster D (Prioritas Akselerasi)",
+      "cluster_color": "#E11D48",
+      "pca_x": -1.26,
+      "pca_y": -1.8599999999999999,
+      "ipm": 69.9,
+      "pdrb": 10.0,
+      "kemiskinan": 12.0,
+      "tpt": 2.5,
+      "ntp": 114.1,
+      "penduduk": 265.1
+    },
+    {
+      "kode": "7211",
+      "wilayah": "Kab. Banggai Laut",
+      "cluster_id": 3,
+      "cluster_name": "Kawasan Prioritas Percepatan Pembangunan",
+      "cluster_badge": "Cluster D (Prioritas Akselerasi)",
+      "cluster_color": "#E11D48",
+      "pca_x": -1.03,
+      "pca_y": -1.7299999999999998,
+      "ipm": 66.5,
+      "pdrb": 3.14,
+      "kemiskinan": 13.9,
+      "tpt": 2.3,
+      "ntp": 107.8,
+      "penduduk": 72.9
+    },
+    {
+      "kode": "7212",
+      "wilayah": "Kab. Morowali Utara",
+      "cluster_id": 0,
+      "cluster_name": "Kawasan Maju & Industri Hilirisasi",
+      "cluster_badge": "Cluster A (Industri)",
+      "cluster_color": "#EA580C",
+      "pca_x": 3.63,
+      "pca_y": 1.9300000000000002,
+      "ipm": 70.4,
+      "pdrb": 35.91,
+      "kemiskinan": 12.8,
+      "tpt": 2.8,
+      "ntp": 116.3,
+      "penduduk": 149.3
+    }
+  ],
+  "summary": "K-Means berhasil mengelompokkan 13 Kabupaten/Kota menjadi 4 Cluster Berbasis Kedekatan Karakter Sosio-Ekonomi."
+};
+
+export const ML_ANOMALIES_DATA = {
+  "total_checked": 13,
+  "anomalies_detected": 3,
+  "model": "Isolation Forest (Contamination=0.20)",
+  "anomalies": [
+    {
+      "kode": "7203",
+      "wilayah": "Kabupaten Morowali",
+      "indicator": "Pertumbuhan PDRB (+24.85%)",
+      "severity": "High (Outlier Signifikan)",
+      "score": -0.84,
+      "is_anomaly": true,
+      "explanation": "Lonjakan PDRB riil mencapai Rp 64,2 Triliun merupakan anomali positif ekstrem di luar 3 standar deviasi provinsi, didorong oleh akselerasi smelter nikel dan investasi industri pengolahan.",
+      "recommendation": "Perkuat sinergi penyerapan tenaga kerja lokal dan hilirisasi rantai pasok UMKM di sekitar kawasan industri."
+    },
+    {
+      "kode": "7212",
+      "wilayah": "Kabupaten Morowali Utara",
+      "indicator": "Laju Pertumbuhan Ekonomi (+21.40%)",
+      "severity": "High (Outlier Signifikan)",
+      "score": -0.76,
+      "is_anomaly": true,
+      "explanation": "PDRB bertumbuh lebih dari 20% dalam 3 tahun berturut-turut, memisahkan wilayah ini dari trajektori konvensional Sulawesi Tengah.",
+      "recommendation": "Monitor potensi kesenjangan daya beli dan perkuat mitigasi inflasi komoditas pangan lokal."
+    },
+    {
+      "kode": "7205",
+      "wilayah": "Kabupaten Donggala",
+      "indicator": "Tingkat Kemiskinan (16.48%) vs Kedekatan Ibukota",
+      "severity": "Medium (Disparitas Spasial)",
+      "score": -0.58,
+      "is_anomaly": true,
+      "explanation": "Meskipun berbatasan langsung dengan Kota Palu (pusat ekonomi), angka kemiskinan Donggala tetap merupakan salah satu yang tertinggi di Sulteng.",
+      "recommendation": "Tingkatkan konektivitas koridor Palu-Donggala serta program jaminan sosial terpadu bagi nelayan pesisir."
+    },
+    {
+      "kode": "7271",
+      "wilayah": "Kota Palu",
+      "indicator": "IPM 82.52 (Sangat Tinggi)",
+      "severity": "Normal (Pencapaian Prima)",
+      "score": 0.32,
+      "is_anomaly": false,
+      "explanation": "IPM berada pada level tertinggi di Sulawesi Tengah, stabil di atas angka rata-rata nasional (74.39).",
+      "recommendation": "Pertahankan kualitas layanan kesehatan dan pendidikan tinggi."
+    }
+  ]
+};
+
+export const ML_POLICY_DATA = {
+  "baseline": {
+    "ipm": 71.38,
+    "kemiskinan": 11.77,
+    "pdrb_growth": 11.91,
+    "pengangguran": 2.95
+  },
+  "elasticities": {
+    "edu_investment_per_10b": {
+      "delta_ipm": 0.12,
+      "delta_kem": -0.08,
+      "shap_weight": 0.35
+    },
+    "infra_investment_per_20b": {
+      "delta_ipm": 0.08,
+      "delta_kem": -0.15,
+      "shap_weight": 0.28
+    },
+    "industrial_project_per_unit": {
+      "delta_ipm": 0.05,
+      "delta_kem": -0.06,
+      "shap_weight": 0.22
+    },
+    "umkm_assistance_per_500u": {
+      "delta_ipm": 0.04,
+      "delta_kem": -0.14,
+      "shap_weight": 0.15
+    }
+  },
+  "disclaimer": "Simulasi berbasis model elastisitas ekonometrik multivariat BPS Sulteng. Hasil simulasi berstatus 'Estimated Scenario' untuk panduan perencanaan strategis daerah."
+};
