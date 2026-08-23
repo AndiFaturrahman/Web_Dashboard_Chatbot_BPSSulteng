@@ -3,6 +3,7 @@
 import React from "react";
 import Navbar from "@/components/navbar/Navbar";
 import Sidebar from "@/components/sidebar/Sidebar";
+import MobileBottomNav from "@/components/navbar/MobileBottomNav";
 import { useSidebar } from "@/components/common/SidebarContext";
 
 export default function AppLayoutWrapper({ children }: { children: React.ReactNode }) {
@@ -15,7 +16,7 @@ export default function AppLayoutWrapper({ children }: { children: React.ReactNo
         <Sidebar />
         <main
           className={
-            "flex-1 w-full min-w-0 px-3.5 py-6 sm:px-6 md:px-8 transition-all duration-300 ease-in-out " +
+            "flex-1 w-full min-w-0 px-3.5 pt-4 pb-28 sm:px-6 md:px-8 md:pb-12 transition-all duration-300 ease-in-out " +
             (isOpen ? "md:ml-64" : "md:ml-0")
           }
         >
@@ -24,6 +25,9 @@ export default function AppLayoutWrapper({ children }: { children: React.ReactNo
           </div>
         </main>
       </div>
+
+      {/* Persistent Mobile Bottom Navigation Bar */}
+      <MobileBottomNav />
     </div>
   );
 }
