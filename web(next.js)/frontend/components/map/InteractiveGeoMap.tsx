@@ -2,188 +2,209 @@
 
 import { useState } from "react";
 import { Regency } from "@/types";
+import { MapPin, Info, Layers, Sparkles } from "lucide-react";
 
 interface GeoMapProps {
   regencies: Regency[];
 }
 
 export default function InteractiveGeoMap({ regencies }: GeoMapProps) {
-  const [selectedMetric, setSelectedMetric] = useState<keyof Regency>("Kemiskinan_Persen");
-  const [activeReg, setActiveReg] = useState<Regency>(regencies[0]);
+  const [selectedKode, setSelectedKode] = useState<string>("7271");
+  const [activeMetric, setActiveMetric] = useState<"kemiskinan" | "ipm" | "pertumbuhan" | "ntp" | "pdrb">("kemiskinan");
 
-  // Spatial Relative Positions representing Sulawesi Tengah's Geography
-  const spatialNodes = [
-    { code: "7207", name: "Kab. Buol", x: 180, y: 40, width: 85, height: 50 },
-    { code: "7206", name: "Kab. Tolitoli", x: 90, y: 70, width: 85, height: 55 },
-    { code: "7205", name: "Kab. Donggala", x: 50, y: 150, width: 80, height: 60 },
-    { code: "7271", name: "Kota Palu", x: 100, y: 220, width: 80, height: 45 },
-    { code: "7208", name: "Kab. Parigi Moutong", x: 190, y: 170, width: 110, height: 60 },
-    { code: "7210", name: "Kab. Sigi", x: 90, y: 280, width: 85, height: 60 },
-    { code: "7204", name: "Kab. Poso", x: 190, y: 250, width: 95, height: 65 },
-    { code: "7209", name: "Kab. Tojo Una-Una", x: 300, y: 200, width: 105, height: 60 },
-    { code: "7201", name: "Kab. Banggai", x: 410, y: 230, width: 100, height: 65 },
-    { code: "7212", name: "Kab. Morowali Utara", x: 260, y: 320, width: 105, height: 60 },
-    { code: "7203", name: "Kab. Morowali", x: 340, y: 380, width: 100, height: 65 },
-    { code: "7202", name: "Kab. Banggai Kepulauan", x: 480, y: 310, width: 95, height: 55 },
-    { code: "7211", name: "Kab. Banggai Laut", x: 500, y: 380, width: 90, height: 50 },
-  ];
+  const activeReg = regencies.find((r) => r.Kode === selectedKode) || regencies[0];
 
-  const getMetricColor = (val: number, metric: keyof Regency) => {
-    if (metric === "Kemiskinan_Persen" || metric === "Pengangguran_Persen") {
-      if (val <= 7.0) return "#10B981"; // Hijau (Prima)
-      if (val <= 12.0) return "#F58220"; // Oranye BPS
-      if (val <= 14.5) return "#EA580C"; // Oranye Tua
-      return "#E11D48"; // Merah (Kritis)
-    } else if (metric === "IPM") {
-      if (val >= 75) return "#10B981";
-      if (val >= 70) return "#F58220";
-      return "#F97316";
-    } else {
-      if (val >= 15) return "#10B981";
-      if (val >= 6) return "#F58220";
-      return "#FB923C";
+  const regencyCoords: Record<string, { cx: number; cy: number; label: string }> = {
+    "7207": { cx: 270, cy: 60, label: "Buol" },
+    "7206": { cx: 210, cy: 90, label: "Tolitoli" },
+    "7205": { cx: 120, cy: 220, label: "Donggala" },
+    "7271": { cx: 155, cy: 240, label: "Palu" },
+    "7210": { cx: 145, cy: 290, label: "Sigi" },
+    "7208": { cx: 230, cy: 230, label: "Parigi Moutong" },
+    "7204": { cx: 270, cy: 300, label: "Poso" },
+    "7209": { cx: 370, cy: 260, label: "Tojo Una-Una" },
+    "7212": { cx: 370, cy: 340, label: "Morowali Utara" },
+    "7203": { cx: 430, cy: 400, label: "Morowali" },
+    "7201": { cx: 480, cy: 270, label: "Banggai" },
+    "7202": { cx: 550, cy: 320, label: "Banggai Kep." },
+    "7211": { cx: 590, cy: 360, label: "Banggai Laut" },
+  };
+
+  const getMetricValue = (r: Regency) => {
+    switch (activeMetric) {
+      case "kemiskinan": return `${r.Kemiskinan_Persen}%`;
+      case "ipm": return r.IPM.toString();
+      case "pertumbuhan": return `${r.Pertumbuhan_PDRB}%`;
+      case "ntp": return r.NTP.toString();
+      case "pdrb": return `Rp ${r.PDRB_Triliun} T`;
     }
   };
 
+  const getNodeColor = (r: Regency) => {
+    if (activeMetric === "kemiskinan") {
+      if (r.Kemiskinan_Persen > 15) return "#E11D48";
+      if (r.Kemiskinan_Persen > 12) return "#F58220";
+      return "#10B981";
+    }
+    if (activeMetric === "ipm") {
+      if (r.IPM >= 75) return "#10B981";
+      if (r.IPM >= 68) return "#F58220";
+      return "#E11D48";
+    }
+    if (activeMetric === "pertumbuhan") {
+      if (r.Pertumbuhan_PDRB > 10) return "#8B5CF6";
+      if (r.Pertumbuhan_PDRB > 6) return "#10B981";
+      return "#F58220";
+    }
+    return "#EA580C";
+  };
+
   return (
-    <div className="glass-card rounded-3xl p-6">
+    <div className="glass-card rounded-3xl p-4 sm:p-6 overflow-hidden">
+      {/* Header & Thematic Filters */}
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-orange-200/60 pb-4">
         <div>
-          <h3 className="text-base font-extrabold uppercase tracking-wide text-slate-900">
-            🗺️ Peta Spasial Choropleth Sulawesi Tengah (13 Wilayah)
-          </h3>
-          <p className="text-xs text-slate-500">
-            Visualisasi geospasial tematik resmi Badan Pusat Statistik
+          <div className="flex items-center gap-2">
+            <span className="flex h-7 w-7 items-center justify-center rounded-xl bg-orange-100 text-[#EA580C]">
+              <Layers className="h-4 w-4" />
+            </span>
+            <h3 className="text-sm sm:text-base font-black text-slate-900">
+              Peta Tematik Spasial 13 Kabupaten/Kota Sulawesi Tengah
+            </h3>
+          </div>
+          <p className="text-xs text-slate-500 mt-1">
+            Klik node wilayah pada peta untuk menginspeksi profil statistik komprehensif
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {[
-            { key: "Kemiskinan_Persen", label: "Tingkat Kemiskinan (%)" },
-            { key: "IPM", label: "Indeks Pembangunan Manusia" },
-            { key: "Pertumbuhan_PDRB", label: "Pertumbuhan PDRB (%)" },
-            { key: "PDRB_Triliun", label: "Total PDRB (Triliun)" },
-            { key: "NTP", label: "NTP Petani" },
-          ].map((m) => (
+
+        {/* Metric Selector Buttons */}
+        <div className="flex flex-wrap gap-1.5 p-1 bg-orange-50/80 rounded-xl border border-orange-200">
+          {(["kemiskinan", "ipm", "pertumbuhan", "ntp", "pdrb"] as const).map((m) => (
             <button
-              key={m.key}
-              onClick={() => setSelectedMetric(m.key as keyof Regency)}
+              key={m}
+              onClick={() => setActiveMetric(m)}
               className={
-                "rounded-xl px-3 py-1.5 text-xs font-black transition-all " +
-                (selectedMetric === m.key
-                  ? "bg-[#F58220] text-white shadow-md shadow-orange-500/25"
-                  : "bg-orange-100/70 text-slate-700 hover:bg-orange-200/60")
+                "px-2.5 py-1 text-[11px] font-black rounded-lg transition-all capitalize " +
+                (activeMetric === m 
+                  ? "bg-gradient-to-r from-[#F58220] to-[#EA580C] text-white shadow-sm" 
+                  : "text-slate-600 hover:text-[#EA580C]")
               }
             >
-              {m.label}
+              {m === "pdrb" ? "PDRB (Triliun)" : m === "kemiskinan" ? "Kemiskinan (%)" : m}
             </button>
           ))}
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 items-center gap-6 lg:grid-cols-3">
-        {/* SVG Spatial GIS Map Canvas */}
-        <div className="lg:col-span-2 relative flex justify-center rounded-2xl border border-orange-200/80 bg-gradient-to-b from-sky-50/50 via-orange-50/30 to-amber-50/40 p-4">
-          <svg viewBox="0 0 630 460" className="w-full h-auto max-h-[460px]">
-            {/* Watermark Grid */}
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FED7AA" strokeWidth="0.5" strokeOpacity="0.4" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
+      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-12 items-center">
+        {/* Left: Scrollable SVG Map Canvas on Mobile */}
+        <div className="lg:col-span-8 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-orange-200">
+          <div className="relative min-w-[500px] w-full h-[380px] bg-gradient-to-br from-orange-50/40 via-amber-50/20 to-white rounded-2xl border border-orange-200/80 flex items-center justify-center p-4">
+            <svg viewBox="0 0 700 480" className="w-full h-full">
+              {/* Island Connectors */}
+              <path
+                d="M 210,90 L 270,60 M 210,90 L 120,220 L 155,240 L 145,290 M 155,240 L 230,230 L 270,300 L 370,260 L 480,270 L 550,320 L 590,360 M 270,300 L 370,340 L 430,400"
+                className="fill-none stroke-orange-300/60 stroke-2 stroke-dasharray-4"
+                strokeDasharray="4 4"
+              />
 
-            {/* Connecting spatial lines */}
-            <polyline
-              points="140,240 230,200 240,280 350,230 460,260 520,330"
-              fill="none"
-              stroke="#FDBA74"
-              strokeWidth="2"
-              strokeDasharray="4 4"
-            />
+              {/* Regional Circular Nodes */}
+              {regencies.map((reg) => {
+                const c = regencyCoords[reg.Kode];
+                if (!c) return null;
+                const isSelected = selectedKode === reg.Kode;
+                const color = getNodeColor(reg);
+                const valStr = getMetricValue(reg);
 
-            {/* Spatial Island Nodes */}
-            {spatialNodes.map((node) => {
-              const regData = regencies.find((r) => r.Kode === node.code) || regencies[0];
-              const val = regData[selectedMetric] as number;
-              const color = getMetricColor(val, selectedMetric);
-              const isSelected = activeReg.Kode === node.code;
-
-              return (
-                <g
-                  key={node.code}
-                  onClick={() => setActiveReg(regData)}
-                  className="cursor-pointer transition-all duration-300 group"
-                >
-                  <rect
-                    x={node.x}
-                    y={node.y}
-                    width={node.width}
-                    height={node.height}
-                    rx="14"
-                    fill={color}
-                    stroke={isSelected ? "#1E293B" : "#FFFFFF"}
-                    strokeWidth={isSelected ? "3" : "1.5"}
-                    className="transition-all duration-300 hover:brightness-110 shadow-lg"
-                    opacity={isSelected ? 1 : 0.88}
-                  />
-                  <text
-                    x={node.x + node.width / 2}
-                    y={node.y + 20}
-                    textAnchor="middle"
-                    className="fill-white text-[11px] font-black pointer-events-none drop-shadow"
+                return (
+                  <g
+                    key={reg.Kode}
+                    onClick={() => setSelectedKode(reg.Kode)}
+                    className="cursor-pointer transition-all duration-300 group"
                   >
-                    {node.name.replace("Kab. ", "").replace("Kota ", "")}
-                  </text>
-                  <text
-                    x={node.x + node.width / 2}
-                    y={node.y + 36}
-                    textAnchor="middle"
-                    className="fill-amber-100 text-[10px] font-extrabold pointer-events-none drop-shadow"
-                  >
-                    {val} {selectedMetric === "IPM" || selectedMetric === "NTP" ? "" : selectedMetric === "PDRB_Triliun" ? "T" : "%"}
-                  </text>
-                </g>
-              );
-            })}
-          </svg>
+                    {/* Outer Glow on Selected */}
+                    {isSelected && (
+                      <circle
+                        cx={c.cx}
+                        cy={c.cy}
+                        r="28"
+                        fill={color}
+                        fillOpacity="0.25"
+                        className="animate-ping"
+                      />
+                    )}
+
+                    {/* Node Body */}
+                    <circle
+                      cx={c.cx}
+                      cy={c.cy}
+                      r={isSelected ? "18" : "14"}
+                      fill={color}
+                      className="transition-all duration-300 drop-shadow-md group-hover:scale-125"
+                      stroke="#FFFFFF"
+                      strokeWidth="2.5"
+                    />
+
+                    {/* Node Text Label */}
+                    <text
+                      x={c.cx}
+                      y={c.cy - 20}
+                      textAnchor="middle"
+                      className="text-[11px] font-black fill-slate-800 drop-shadow-sm select-none"
+                    >
+                      {c.label}
+                    </text>
+
+                    {/* Metric Sub-Label */}
+                    <text
+                      x={c.cx}
+                      y={c.cy + 25}
+                      textAnchor="middle"
+                      className="text-[9px] font-bold fill-slate-500 select-none"
+                    >
+                      {valStr}
+                    </text>
+                  </g>
+                );
+              })}
+            </svg>
+          </div>
         </div>
 
-        {/* Selected Regency Inspector Card */}
-        <div className="glass-card rounded-2xl p-5 border-2 border-[#F58220]/40">
-          <div className="flex items-center justify-between border-b border-orange-200 pb-3">
-            <div>
-              <div className="text-xs font-black uppercase text-slate-400">Inspeksi Detail</div>
-              <h4 className="text-xl font-black text-slate-900">{activeReg.Wilayah}</h4>
+        {/* Right: Selected Region Inspector Panel */}
+        <div className="lg:col-span-4 space-y-4">
+          <div className="rounded-2xl border-2 border-orange-300 bg-gradient-to-br from-orange-50/90 via-white to-orange-50/60 p-5 shadow-sm">
+            <div className="flex items-center justify-between">
+              <span className="rounded-full bg-[#EA580C] px-2.5 py-0.5 text-[10px] font-black text-white">
+                Kode BPS: {activeReg.Kode}
+              </span>
+              <span className="text-xs font-bold text-slate-400">{activeReg.Tipe}</span>
             </div>
-            <span className="rounded-full bg-[#EA580C] px-3 py-1 text-xs font-bold text-white">
-              Kode {activeReg.Kode}
-            </span>
-          </div>
 
-          <div className="mt-4 space-y-2.5">
-            <div className="flex items-center justify-between rounded-xl bg-orange-50/80 p-2.5">
-              <span className="text-xs font-bold text-slate-600">👥 Jumlah Penduduk</span>
-              <span className="text-sm font-black text-slate-900">{activeReg.Penduduk_Ribu} Ribu Jiwa</span>
+            <h4 className="mt-2 text-xl font-black text-slate-900">{activeReg.Wilayah}</h4>
+
+            <div className="mt-4 grid grid-cols-2 gap-2 text-xs font-bold text-slate-700">
+              <div className="bg-white p-2.5 rounded-xl border border-orange-100 shadow-xs">
+                <div className="text-[10px] text-slate-400">IPM</div>
+                <div className="text-base font-black text-[#EA580C]">{activeReg.IPM}</div>
+              </div>
+              <div className="bg-white p-2.5 rounded-xl border border-orange-100 shadow-xs">
+                <div className="text-[10px] text-slate-400">Kemiskinan</div>
+                <div className="text-base font-black text-rose-600">{activeReg.Kemiskinan_Persen}%</div>
+              </div>
+              <div className="bg-white p-2.5 rounded-xl border border-orange-100 shadow-xs">
+                <div className="text-[10px] text-slate-400">PDRB Riil</div>
+                <div className="text-base font-black text-slate-800">Rp {activeReg.PDRB_Triliun} T</div>
+              </div>
+              <div className="bg-white p-2.5 rounded-xl border border-orange-100 shadow-xs">
+                <div className="text-[10px] text-slate-400">Pertumbuhan</div>
+                <div className="text-base font-black text-emerald-600">+{activeReg.Pertumbuhan_PDRB}%</div>
+              </div>
             </div>
-            <div className="flex items-center justify-between rounded-xl bg-orange-50/80 p-2.5">
-              <span className="text-xs font-bold text-slate-600">❤️ IPM (Pembangunan)</span>
-              <span className="text-sm font-black text-emerald-700">{activeReg.IPM} Poin</span>
-            </div>
-            <div className="flex items-center justify-between rounded-xl bg-orange-50/80 p-2.5">
-              <span className="text-xs font-bold text-slate-600">💰 Persentase Kemiskinan</span>
-              <span className="text-sm font-black text-rose-600">{activeReg.Kemiskinan_Persen}%</span>
-            </div>
-            <div className="flex items-center justify-between rounded-xl bg-orange-50/80 p-2.5">
-              <span className="text-xs font-bold text-slate-600">📈 Pertumbuhan PDRB</span>
-              <span className="text-sm font-black text-[#EA580C]">{activeReg.Pertumbuhan_PDRB}%</span>
-            </div>
-            <div className="flex items-center justify-between rounded-xl bg-orange-50/80 p-2.5">
-              <span className="text-xs font-bold text-slate-600">🌾 Nilai Tukar Petani (NTP)</span>
-              <span className="text-sm font-black text-blue-700">{activeReg.NTP} Poin</span>
-            </div>
-            <div className="flex items-center justify-between rounded-xl bg-orange-50/80 p-2.5">
-              <span className="text-xs font-bold text-slate-600">💼 Tingkat Pengangguran</span>
-              <span className="text-sm font-black text-slate-800">{activeReg.Pengangguran_Persen}%</span>
+
+            <div className="mt-4 flex items-center justify-between border-t border-orange-200/60 pt-3 text-xs font-bold text-slate-600">
+              <span>Penduduk: <strong>{activeReg.Penduduk_Ribu} Ribu</strong></span>
+              <span>NTP: <strong>{activeReg.NTP}</strong></span>
             </div>
           </div>
         </div>

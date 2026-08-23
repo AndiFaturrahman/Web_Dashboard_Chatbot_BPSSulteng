@@ -37,7 +37,7 @@ export default function InteractiveHeatmap({ title, regencies }: HeatmapProps) {
   };
 
   return (
-    <div className="glass-card rounded-2xl p-6">
+    <div className="glass-card rounded-2xl p-4 sm:p-6 overflow-hidden">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-orange-200/60 pb-4">
         <div>
           <h3 className="text-sm font-extrabold uppercase tracking-wide text-slate-800">
@@ -47,21 +47,22 @@ export default function InteractiveHeatmap({ title, regencies }: HeatmapProps) {
             Matriks evaluasi kinerja komparatif 13 Kabupaten/Kota Sulawesi Tengah
           </p>
         </div>
-        <div className="flex items-center gap-3 text-[11px] font-bold">
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-emerald-500"></span> Prima</span>
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-amber-400"></span> Cukup</span>
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-orange-400"></span> Waspada</span>
-          <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-rose-500"></span> Kritis</span>
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] font-bold">
+          <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded bg-emerald-500"></span> Prima</span>
+          <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded bg-amber-400"></span> Cukup</span>
+          <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded bg-orange-400"></span> Waspada</span>
+          <span className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded bg-rose-500"></span> Kritis</span>
         </div>
       </div>
 
-      <div className="mt-4 overflow-x-auto">
-        <table className="w-full border-collapse text-xs">
+      {/* Scrollable Container with Minimum Width */}
+      <div className="mt-4 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-orange-200">
+        <table className="min-w-[640px] w-full border-collapse text-xs">
           <thead>
             <tr>
-              <th className="p-2.5 text-left font-black text-slate-700">Kabupaten / Kota</th>
-              {indicators.map((ind) => (
-                <th key={ind.key} className="p-2.5 text-center font-black text-slate-700">
+              <th className="p-2.5 text-left font-black text-slate-700 bg-orange-50/50 rounded-l-lg">Kabupaten / Kota</th>
+              {indicators.map((ind, i) => (
+                <th key={ind.key} className={"p-2.5 text-center font-black text-slate-700 bg-orange-50/50 " + (i === indicators.length - 1 ? "rounded-r-lg" : "")}>
                   {ind.label}
                 </th>
               ))}
@@ -70,31 +71,19 @@ export default function InteractiveHeatmap({ title, regencies }: HeatmapProps) {
           <tbody>
             {regencies.map((reg) => (
               <tr key={reg.Kode} className="border-t border-orange-100 hover:bg-orange-50/40 transition-all">
-                <td className="p-2.5 font-bold text-slate-800">{reg.Wilayah}</td>
+                <td className="p-2.5 font-bold text-slate-800 whitespace-nowrap">{reg.Wilayah}</td>
                 {indicators.map((ind) => {
                   const val = reg[ind.key as keyof Regency] as number;
                   const cellColor = getColor(val, ind.min, ind.max, ind.higherIsBetter);
                   return (
                     <td
                       key={ind.key}
-                      onMouseEnter={() =>
-                        setHoveredCell({
-                          wilayah: reg.Wilayah,
-                          indicator: ind.label,
-                          value: val,
-                          unit: ind.unit,
-                        })
-                      }
-                      onMouseLeave={() => setHoveredCell(null)}
                       className="p-1.5 text-center"
+                      onMouseEnter={() => setHoveredCell({ wilayah: reg.Wilayah, indicator: ind.label, value: val, unit: ind.unit })}
+                      onMouseLeave={() => setHoveredCell(null)}
                     >
-                      <div
-                        className={
-                          "mx-auto flex h-8 w-16 items-center justify-center rounded-lg font-black shadow-sm transition-all duration-200 hover:scale-110 cursor-pointer " +
-                          cellColor
-                        }
-                      >
-                        {val}
+                      <div className={"rounded-lg py-1.5 font-black text-[11px] transition-all hover:scale-105 shadow-sm " + cellColor}>
+                        {val} {ind.unit !== "Poin" && ind.unit !== "%" ? ind.unit : ""}
                       </div>
                     </td>
                   );
@@ -105,12 +94,18 @@ export default function InteractiveHeatmap({ title, regencies }: HeatmapProps) {
         </table>
       </div>
 
-      {hoveredCell && (
-        <div className="mt-4 rounded-xl border border-orange-200 bg-orange-50/80 p-3 text-xs font-bold text-slate-800">
-          📍 <span className="text-[#EA580C]">{hoveredCell.wilayah}</span> — {hoveredCell.indicator}:{" "}
-          <span className="text-base font-black text-slate-900">{hoveredCell.value} {hoveredCell.unit}</span>
-        </div>
-      )}
+      {/* Hover Info Badge */}
+      <div className="mt-4 flex min-h-[32px] items-center justify-between rounded-xl bg-orange-50/70 px-4 py-2 text-xs font-bold text-slate-700">
+        {hoveredCell ? (
+          <div>
+            📍 <span className="text-[#EA580C]">{hoveredCell.wilayah}</span> — {hoveredCell.indicator}: <span className="font-black text-slate-900">{hoveredCell.value} {hoveredCell.unit}</span>
+          </div>
+        ) : (
+          <div className="text-slate-400 italic text-[11px]">
+            💡 Geser atau arahkan kursor ke sel untuk melihat detail nilai indikator
+          </div>
+        )}
+      </div>
     </div>
   );
 }
