@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Regency } from "@/types";
-import { MapPin, Info, Layers, Sparkles } from "lucide-react";
+import { MapPin, Info, Layers, Sparkles, CheckCircle2 } from "lucide-react";
 
 interface GeoMapProps {
   regencies: Regency[];
@@ -73,7 +73,7 @@ export default function InteractiveGeoMap({ regencies }: GeoMapProps) {
             </h3>
           </div>
           <p className="text-xs text-slate-500 mt-1">
-            Klik node wilayah pada peta untuk menginspeksi profil statistik komprehensif
+            Pilih wilayah pada peta untuk menampilkan profil statistik lengkap di panel samping
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function InteractiveGeoMap({ regencies }: GeoMapProps) {
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-12 items-center">
-        {/* Left: Scrollable SVG Map Canvas on Mobile */}
+        {/* Left: Scrollable SVG Map Canvas */}
         <div className="lg:col-span-8 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-orange-200">
           <div className="relative min-w-[500px] w-full h-[380px] bg-gradient-to-br from-orange-50/40 via-amber-50/20 to-white rounded-2xl border border-orange-200/80 flex items-center justify-center p-4">
             <svg viewBox="0 0 700 480" className="w-full h-full">
@@ -122,27 +122,38 @@ export default function InteractiveGeoMap({ regencies }: GeoMapProps) {
                     onClick={() => setSelectedKode(reg.Kode)}
                     className="cursor-pointer transition-all duration-300 group"
                   >
-                    {/* Outer Glow on Selected */}
+                    {/* Elegant Static Selected Halo (Replaced harsh infinite ping loop) */}
                     {isSelected && (
-                      <circle
-                        cx={c.cx}
-                        cy={c.cy}
-                        r="28"
-                        fill={color}
-                        fillOpacity="0.25"
-                        className="animate-ping"
-                      />
+                      <>
+                        <circle
+                          cx={c.cx}
+                          cy={c.cy}
+                          r="25"
+                          fill={color}
+                          fillOpacity="0.18"
+                        />
+                        <circle
+                          cx={c.cx}
+                          cy={c.cy}
+                          r="24"
+                          fill="none"
+                          stroke={color}
+                          strokeWidth="2"
+                          strokeDasharray="3 3"
+                          className="animate-spin-slow"
+                        />
+                      </>
                     )}
 
                     {/* Node Body */}
                     <circle
                       cx={c.cx}
                       cy={c.cy}
-                      r={isSelected ? "18" : "14"}
+                      r={isSelected ? "17" : "13"}
                       fill={color}
-                      className="transition-all duration-300 drop-shadow-md group-hover:scale-125"
+                      className="transition-all duration-300 drop-shadow-md group-hover:scale-110"
                       stroke="#FFFFFF"
-                      strokeWidth="2.5"
+                      strokeWidth={isSelected ? "3" : "2"}
                     />
 
                     {/* Node Text Label */}
@@ -150,7 +161,7 @@ export default function InteractiveGeoMap({ regencies }: GeoMapProps) {
                       x={c.cx}
                       y={c.cy - 20}
                       textAnchor="middle"
-                      className="text-[11px] font-black fill-slate-800 drop-shadow-sm select-none"
+                      className={"text-[11px] select-none " + (isSelected ? "font-black fill-[#EA580C]" : "font-bold fill-slate-800")}
                     >
                       {c.label}
                     </text>
@@ -160,7 +171,7 @@ export default function InteractiveGeoMap({ regencies }: GeoMapProps) {
                       x={c.cx}
                       y={c.cy + 25}
                       textAnchor="middle"
-                      className="text-[9px] font-bold fill-slate-500 select-none"
+                      className={"text-[9px] select-none " + (isSelected ? "font-black fill-slate-900" : "font-bold fill-slate-500")}
                     >
                       {valStr}
                     </text>
@@ -176,9 +187,9 @@ export default function InteractiveGeoMap({ regencies }: GeoMapProps) {
           <div className="rounded-2xl border-2 border-orange-300 bg-gradient-to-br from-orange-50/90 via-white to-orange-50/60 p-5 shadow-sm">
             <div className="flex items-center justify-between">
               <span className="rounded-full bg-[#EA580C] px-2.5 py-0.5 text-[10px] font-black text-white">
-                Kode BPS: {activeReg.Kode}
+                Wilayah Aktif
               </span>
-              <span className="text-xs font-bold text-slate-400">{activeReg.Tipe}</span>
+              <span className="text-xs font-bold text-slate-400">Kode: {activeReg.Kode}</span>
             </div>
 
             <h4 className="mt-2 text-xl font-black text-slate-900">{activeReg.Wilayah}</h4>
