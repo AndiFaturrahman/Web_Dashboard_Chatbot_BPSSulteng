@@ -22,7 +22,7 @@ streamlit run app.py
 ### 2. Fullstack Next.js 15 + FastAPI
 `ash
 # Frontend
-cd web(next.js)/frontend
+cd web(next.js)/frontend5
 npm install
 npm run dev
 
